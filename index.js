@@ -180,7 +180,7 @@ var quotient = 66 / 33;
 var myVar = 87;
 
 // Only change code below this line
-myVar = myVar + 1;
+myVar++;
 
 // 12 Basic JavaScript: Decrement a Number with JavaScript
 // You can easily decrement or decrease a variable by one with the -- operator.
@@ -198,7 +198,7 @@ myVar = myVar + 1;
 var myVar = 11;
 
 // Only change code below this line
-myVar = myVar - 1;
+myVar--;
 
 // 13 Basic JavaScript: Create Decimal Numbers with JavaScript
 // We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
@@ -208,20 +208,20 @@ myVar = myVar - 1;
 var ourDecimal = 5.7;
 
 // Only change code below this line
-
+var myDecimal = 3.8;
 //14 Basic JavaScript: Multiply Two Decimals with JavaScript
 // In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
 
 // Let's multiply two decimals together to get their product.
 
 // Change the 0.0 so that product will equal 5.0.
-var product = 2.0 * 0.0;
+var product = 2.0 * 2.5;
 
 // 15 Basic JavaScript: Divide One Decimal by Another with JavaScript
 // Now let's divide one decimal by another.
 
 // Change the 0.0 so that quotient will equal to 2.2.
-var quotient = 0.0 / 2.0; // Change this line
+var quotient = 4.4 / 2.0; // Change this line
 
 // 16 Basic JavaScript: Finding a Remainder in JavaScript
 // The remainder operator % gives the remainder of the division of two numbers.
@@ -243,8 +243,8 @@ var quotient = 0.0 / 2.0; // Change this line
 // Set remainder equal to the remainder of 11 divided by 3 using the remainder (%) operator.
 // Only change code below this line
 
-var remainder;
-
+var remainder = 11 % 3;
+console.log(remainder);
 // 17 Basic JavaScript: Compound Assignment With Augmented Addition
 // In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
 
@@ -267,9 +267,9 @@ var b = 17;
 var c = 12;
 
 // Only change code below this line
-a = a + 12;
-b = 9 + b;
-c = c + 7;
+a += 12;
+b += 9;
+c += 7;
 
 // 18 Basic JavaScript: Compound Assignment With Augmented Subtraction
 // Like the += operator, -= subtracts a number from a variable.
@@ -287,9 +287,9 @@ var b = 9;
 var c = 3;
 
 // Only change code below this line
-a = a - 6;
-b = b - 15;
-c = c - 1;
+a -= 6;
+b -= 15;
+c =- 1;
 
 // 19 Basic JavaScript: Compound Assignment With Augmented Multiplication
 // The *= operator multiplies a variable by a number.
@@ -307,9 +307,9 @@ var b = 12;
 var c = 4.6;
 
 // Only change code below this line
-a = a * 5;
-b = 3 * b;
-c = c * 10;
+a *= 5;
+b *= 3;
+c *=10 ;
 
 // 20 Basic JavaScript: Compound Assignment With Augmented Division
 // The /= operator divides a variable by another number.
@@ -326,9 +326,9 @@ var b = 108;
 var c = 33;
 
 // Only change code below this line
-a = a / 12;
-b = b / 4;
-c = c / 11;
+a /= 12;
+b /= 4;
+c /= 11;
 
 // 21 Basic JavaScript: Declare String Variables
 // Previously we have used the code
@@ -338,7 +338,8 @@ c = c / 11;
 // "your name" is called a string literal. It is a string because it is a series of zero or more characters enclosed in single or double quotes.
 
 // Create two new string variables: myFirstName and myLastName and assign them the values of your first and last name, respectively.
-
+var myFirstName = 'Austin';
+var myLastName = "Morales";
 
 
 // 22 Basic JavaScript: Escaping Literal Quotes in Strings
@@ -355,7 +356,7 @@ c = c / 11;
 // Use backslashes to assign a string to the myStr variable so that if you were to print it to the console, you would see:
 
 // I am a "double quoted" string inside "double quotes".
-var myStr = ""; // Change this line
+var newStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
 
 // 23 Basic JavaScript: Concatenating Strings with Plus Operator
 // In JavaScript, when the + operator is used with a String value, it is called the concatenation operator. You can build a new string out of other strings by concatenating them together.
@@ -372,7 +373,7 @@ var myStr = ""; // Change this line
 // // ourStr is "I come first. I come second."
 // Build myStr from the strings "This is the start. " and "This is the end." using the + operator.
 
-var myStr; // Change this line
+var endStr = "This is the start. " + "This is the end."; // Change this line
 
 // 24 Basic JavaScript: Concatenating Strings with the Plus Equals Operator
 // We can also use the += operator to concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.
@@ -387,7 +388,8 @@ var myStr; // Change this line
 // // ourStr is now "I come first. I come second."
 // Build myStr over several lines by concatenating these two strings: "This is the first sentence. " and "This is the second sentence." using the += operator. Use the += operator similar to how it is shown in the editor. Start by assigning the first string to myStr, then add on the second string.
 
-var myStr;
+var addStr = 'This is the first sentence. ';
+addStr += "This is the second sentence.";
 
 // 25 Basic JavaScript: Constructing Strings with Variables
 // Sometimes you will need to build a string, Mad Libs style. By using the concatenation operator (+), you can insert one or more variables into a string you're building.
@@ -398,8 +400,8 @@ var myStr;
 // var ourStr = "Hello, our name is " + ourName + ", how are you?";
 // // ourStr is now "Hello, our name is Zorkbork, how are you?"
 // Set myName to a string equal to your name and build myStr with myName between the strings "My name is " and " and I am well!"
-var myName;
-var myStr;
+var myName = "Austin";
+var madStr = "My name is " + myName + " and I am well!";
 
 
 // 26 Basic JavaScript: Appending Variables to Strings
@@ -415,8 +417,9 @@ var myStr;
 
 // Change code below this line
 
-var someAdjective;
-var myStr = "Learning to code is ";
+var someAdjective = "challenging";
+var codeStr = "Learning to code is ";
+codeStr += someAdjective;
 
 // 27 Basic JavaScript: Find the Length of a String
 // You can find the length of a String value by writing .length after the string variable or string literal.
@@ -432,7 +435,7 @@ var lastName = "Lovelace";
 
 // Only change code below this line
 
-lastNameLength = lastName;
+lastNameLength = lastName.length;
 
 // 28 Basic JavaScript: Use Bracket Notation to Find the First Character in a String
 
@@ -454,7 +457,7 @@ var firstLetterOfLastName = "";
 var lastName = "Lovelace";
 
 // Only change code below this line
-firstLetterOfLastName = lastName; // Change this line
+firstLetterOfLastName = lastName[0]; // Change this line
 
 // 29 Basic JavaScript: Understand String Immutability
 // In JavaScript, String values are immutable, which means that they cannot be altered once created.
@@ -474,7 +477,7 @@ firstLetterOfLastName = lastName; // Change this line
 var myStr = "Jello World";
 
 // Only change code below this line
-myStr[0] = "H"; // Change this line
+myStr = "Hello World" // Change this line
 // Only change code above this line
 
 //30 Basic JavaScript: Use Bracket Notation to Find the Nth Character in a String
@@ -492,7 +495,7 @@ myStr[0] = "H"; // Change this line
 var lastName = "Lovelace";
 
 // Only change code below this line
-var thirdLetterOfLastName = lastName; // Change this line
+var thirdLetterOfLastName = lastName[2]; // Change this line
 
 // 31 Basic JavaScript: Use Bracket Notation to Find the Last Character in a String
 // In order to get the last letter of a string, you can subtract one from the string's length.
@@ -510,7 +513,7 @@ var thirdLetterOfLastName = lastName; // Change this line
 var lastName = "Lovelace";
 
 // Only change code below this line
-var lastLetterOfLastName = lastName; // Change this line
+var lastLetterOfLastName = lastName[lastName.length - 1]; // Change this line
 
 // 32 Basic JavaScript: Use Bracket Notation to Find the Nth-to-Last Character in a String
 // You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.
@@ -528,7 +531,7 @@ var lastLetterOfLastName = lastName; // Change this line
 var lastName = "Lovelace";
 
 // Only change code below this line
-var secondToLastLetterOfLastName = lastName; // Change this line
+var secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change this line
 
 // 33 Basic JavaScript: Word Blanks
 // var wordBlanks = "the" + ' '+ myNoun +" "+ myAdjective+ " " + myVerb +" "+ myAdverb; // Change this line
@@ -552,5 +555,5 @@ var myVerb = "ran";
 var myAdverb = "quickly";
 
 // Only change code below this line
-var wordBlanks = ""; // Change this line
+var wordBlanks = "The " + myAdjective + " fluffy " + myNoun + " got scared and " + myVerb + ' very ' + myAdverb ; // Change this line
 // Only change code above this line
