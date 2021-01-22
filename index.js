@@ -567,19 +567,21 @@ var wordBlanks = "The " + myAdjective + " fluffy " + myNoun + " got scared and "
 
 // Modify the new array myArray so that it contains both a string and a number (in that order).
 // Only change code below this line
-var myArray = [];
+var myArray = ["Friday", 2];
 
 // 35 Basic JavaScript: Nest one Array within Another Array
 // You can also nest arrays within other arrays, like below:
 
-// [["Bulls", 23], ["White Sox", 45]]
+[ 
+  ["Bulls", 23], ["White Sox", 45] 
+]
 // This is also called a multi-dimensional array.
 
 // Create a nested array called myArray.
 
 // Only change code below this line
-var myArray = [];
-
+var zeroArray = [["March", 9], ["April", 1]];
+zeroArray[0][1]
 // 36 Basic JavaScript: Access Array Data with Indexes
 // We can access the data inside arrays using indexes.
 
@@ -599,7 +601,7 @@ var myArray = [];
 var myArray = [50,60,70];
 
 // Only change code below this line
-
+var myData = myArray[0];
 // 37 Basic JavaScript: Modify Array Data With Indexes
 // Unlike strings, the entries of arrays are mutable and can be changed freely.
 
@@ -613,27 +615,27 @@ var myArray = [50,60,70];
 var myArray = [18,64,99];
 
 // Only change code below this line
-
+myArray[0]= 45;
 // 38 Basic JavaScript: Access Multi-Dimensional Arrays With Indexes
 // One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
 
 // Example
 
-// var arr = [
-//   [1,2,3],
-//   [4,5,6],
-//   [7,8,9],
-//   [[10,11,12], 13, 14]
-// ];
+var arr = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  [[10,11,12], 13, 14]
+];
 // arr[3]; // equals [[10,11,12], 13, 14]
 // arr[3][0]; // equals [10,11,12]
 // arr[3][0][1]; // equals 11
 // Using bracket notation select an element from myArray such that myData is equal to 8.
 // Setup
 var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
-
+          
 // Only change code below this line
-var myData = myArray[0][0];
+var myData = myArray[2][1];
 
 // 39 Basic JavaScript: Manipulate Arrays With push()
 // An easy way to append data to the end of an array is via the push() function.
@@ -651,10 +653,10 @@ var myData = myArray[0][0];
 
 // Push ["dog", 3] onto the end of the myArray variable.
 // Setup
-var myArray = [["John", 23], ["cat", 2]];
+var dogArray = [["John", 23], ["cat", 2]];
 
 // Only change code below this line
-
+dogArray.push(["dog", 3])
 // 40 Basic JavaScript: Manipulate Arrays With pop()
 // Another way to change the data in an array is with the .pop() function.
 
@@ -662,16 +664,19 @@ var myArray = [["John", 23], ["cat", 2]];
 
 // Any type of entry can be "popped" off of an array - numbers, strings, even nested arrays.
 
-// var threeArr = [1, 4, 6];
-// var oneDown = threeArr.pop();
-// console.log(oneDown); // Returns 6
-// console.log(threeArr); // Returns [1, 4]
+var threeArr = [1, 4, 6];
+var oneDown = threeArr.pop();
+console.log(oneDown); // Returns 6
+console.log(threeArr); // Returns [1, 4]
 // Use the .pop() function to remove the last item from myArray, assigning the "popped off" value to removedFromMyArray.
 // Setup
-var myArray = [["John", 23], ["cat", 2]];
+var myArray = [
+  ["John", 23],
+   ["cat", 2]
+];
 
 // Only change code below this line
-var removedFromMyArray;
+var removedFromMyArray = myArray.pop();
 
 // 41 Basic JavaScript: Manipulate Arrays With shift()
 // pop() always removes the last element of an array. What if you want to remove the first?
@@ -687,10 +692,10 @@ var removedFromMyArray;
 // Use the .shift() function to remove the first item from myArray, assigning the "shifted off" value to removedFromMyArray.
 
 // Setup
-var myArray = [["John", 23], ["dog", 3]];
+var awArray = [["John", 23], ["dog", 3]];
 
 // Only change code below this line
-var removedFromMyArray;
+var removedFromMyArr = awArray.shift();
  
 // 42 Basic JavaScript: Manipulate Arrays With unshift()
 // Not only can you shift elements off of the beginning of an array, you can also unshift elements to the beginning of an array i.e. add elements in front of the array.
@@ -706,11 +711,11 @@ var removedFromMyArray;
 
 // Add ["Paul",35] to the beginning of the myArray variable using unshift().
 // Setup
-var myArray = [["John", 23], ["dog", 3]];
-myArray.shift();
+var lolArray = [["John", 23], ["dog", 3]];
+lolArray.shift();
 
 // Only change code below this line
-
+lolArray.unshift(["Paul",35]);
 
 
 // 43 Basic JavaScript: Shopping List
@@ -722,22 +727,35 @@ myArray.shift();
 
 // There should be at least 5 sub-arrays in the list.
 
-var myList = [];
+var myList = [
+  ["Austin", 9, false],
+  ["Drake", 15],
+  ["Ron", 7, true],
+  ["Kiah", 4],
+  ["Cassie", "Gone"]
+
+
+];
 
 // 44 Basic JavaScript: Write Reusable JavaScript with Functions
 // In JavaScript, we can divide up our code into reusable parts called functions.
 
 // Here's an example of a function:
 
-// function functionName() {
-//   console.log("Hello World");
-// }
+function functionName() {
+
+  //code block
+  console.log("Function was called!");
+}
+functionName(); 
 // You can call or invoke this function by using its name followed by parentheses, like this: functionName(); Each time the function is called it will print out the message "Hello World" on the dev console. All of the code between the curly braces will be executed every time the function is called.
 
 // Create a function called reusableFunction which prints "Hi World" to the dev console.
 // Call the function.
-
-
+function reusableFunction(){
+  console.log("Hi World")
+}
+reusableFunction();
 
 // 45 Basic JavaScript: Passing Values to Functions with Arguments
 
@@ -747,12 +765,17 @@ var myList = [];
 // function testFun(param1, param2) {
 //   console.log(param1, param2);
 // }
+// testFun(10, "Hello");
+// testFun(300, "Goodbye");
 // Then we can call testFun: testFun("Hello", "World"); We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
 
 // Create a function called functionWithArgs that accepts two arguments and outputs their sum to the dev console.
 // Call the function with two numbers as arguments.
-
-
+function functionWithArgs(x,y){
+  console.log(x+y);
+}
+functionWithArgs(6,6);
+functionWithArgs(60,6);
 
 // 46 Basic JavaScript: Global Scope and Functions
 // In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
@@ -764,11 +787,11 @@ var myList = [];
 // Inside function fun1, assign 5 to oopsGlobal without using the var keyword.
 
 // Declare the myGlobal variable below this line
-
+var myGlobal = 10;
 
 function fun1() {
     // Assign 5 to oopsGlobal Here
-  
+  oopsGlobal = 5;
   }
   
   // Only change code above this line
@@ -802,7 +825,7 @@ function fun1() {
 function myLocalScope() {
 
     // Only change code below this line
-  
+  var myVar = 5;
     console.log('inside myLocalScope', myVar);
   }
   myLocalScope();
@@ -817,11 +840,11 @@ function myLocalScope() {
 
 // In this example:
 
-// var someVar = "Hat";
-// function myFun() {
-//   var someVar = "Head";
-//   return someVar;
-// }
+var someVar = "Hat";
+function myFun() {
+  var someVar = "Head";
+  return someVar;
+}
 // The function myFun will return "Head" because the local version of the variable is present.
 
 // Add a local variable to myOutfit function to override the value of outerWear with "sweater".
@@ -830,7 +853,7 @@ var outerWear = "T-Shirt";
 
 function myOutfit() {
   // Only change code below this line
-
+var outerWear = "sweater"
 
 
   // Only change code above this line
@@ -851,8 +874,12 @@ myOutfit();
 // plusThree takes an argument for num and returns a value equal to num + 3.
 
 // Create a function timesFive that accepts one argument, multiplies it by 5, and returns the new value. See the last line in the editor for an example of how you can test your timesFive function.
+function timesFive(boss){
+  return boss * 5;
 
-
+}
+timesFive(1);
+timesFive(10);
 
 // 50 Basic JavaScript: Understanding Undefined Value returned from a Function
 // A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
@@ -876,7 +903,9 @@ function addThree() {
 }
 
 // Only change code below this line
-
+function addFive(){
+  sum = sum + 5
+}
 
 // Only change code above this line
 
