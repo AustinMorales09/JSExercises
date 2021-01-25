@@ -903,14 +903,14 @@ function addThree() {
 }
 
 // Only change code below this line
-function addFive(){
+function addFive(sum){
   sum = sum + 5
 }
 
 // Only change code above this line
 
 addThree();
-addFive();
+addFive(6);
 
 
 // 51 Basic JavaScript: Assignment with a Returned Value
@@ -932,7 +932,7 @@ function processArg(num) {
 }
 
 // Only change code below this line
-
+processed = processArg(7);
 
 // 52 Basic JavaScript: Stand in Line
 // In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
@@ -945,8 +945,11 @@ function processArg(num) {
 
 function nextInLine(arr, item) {
     // Only change code below this line
-    
-    return item;
+    arr.push(item);
+    var removed = arr.shift();
+
+    return removed;
+  
     // Only change code above this line
     
   
@@ -971,7 +974,7 @@ function welcomeToBooleans() {
 
     // Only change code below this line
   
-    return false; // Change this line
+    return true; // Change this line
   
     // Only change code above this line
   }
@@ -1001,11 +1004,12 @@ function welcomeToBooleans() {
 // Create an if statement inside the function to return "Yes, that was true" if the parameter wasThatTrue is true and return "No, that was false" otherwise.
 function trueOrFalse(wasThatTrue) {
     // Only change code below this line
-  
-  
+  if(wasThatTrue) {
+    return "Yes, that was true"
+  }
+  return "No, that was false"
   
     // Only change code above this line
-  
   }
 
 
@@ -1030,7 +1034,7 @@ function trueOrFalse(wasThatTrue) {
 
 // Setup
 function testEqual(val) {
-    if (val) { // Change this line
+    if (val == 12) { // Change this line
       return "Equal";
     }
     return "Not Equal";
@@ -1054,7 +1058,7 @@ function testEqual(val) {
 // Use the strict equality operator in the if statement so the function will return "Equal" when val is strictly equal to 7
 // Setup
 function testStrict(val) {
-    if (val) { // Change this line
+    if (val === 7) { // Change this line
       return "Equal";
     }
     return "Not Equal";
@@ -1079,7 +1083,7 @@ function testStrict(val) {
 // The compareEquality function in the editor compares two values using the equality operator. Modify the function so that it returns "Equal" only when the values are strictly equal.
 // Setup
 function compareEquality(a, b) {
-    if (a == b) { // Change this line
+    if (a === b) { // Change this line
       return "Equal";
     }
     return "Not Equal";
@@ -1102,7 +1106,7 @@ function compareEquality(a, b) {
 
 // Setup
 function testNotEqual(val) {
-    if (val) { // Change this line
+    if (val != 99) { // Change this line
       return "Not Equal";
     }
     return "Equal";
@@ -1123,7 +1127,7 @@ function testNotEqual(val) {
 
 // Setup
 function testStrictNotEqual(val) {
-    if (val) { // Change this line
+    if (val !== 17) { // Change this line
       return "Not Equal";
     }
     return "Equal";
@@ -1145,11 +1149,11 @@ function testStrictNotEqual(val) {
 // Add the greater than operator to the indicated lines so that the return statements make sense.
 
 function testGreaterThan(val) {
-    if (val) {  // Change this line
+    if (val > 100) {  // Change this line
       return "Over 100";
     }
   
-    if (val) {  // Change this line
+    if (val > 10) {  // Change this line
       return "Over 10";
     }
   
@@ -1172,11 +1176,11 @@ function testGreaterThan(val) {
 // Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testGreaterOrEqual(val) {
-    if (val) {  // Change this line
+    if (val >= 20) {  // Change this line
       return "20 or Over";
     }
   
-    if (val) {  // Change this line
+    if (val >= 10) {  // Change this line
       return "10 or Over";
     }
   
@@ -1198,11 +1202,11 @@ function testGreaterOrEqual(val) {
 
 // Add the less than operator to the indicated lines so that the return statements make sense.
 function testLessThan(val) {
-    if (val) {  // Change this line
+    if (val < 25) {  // Change this line
       return "Under 25";
     }
   
-    if (val) {  // Change this line
+    if (val < 55) {  // Change this line
       return "Under 55";
     }
   
@@ -1224,11 +1228,11 @@ function testLessThan(val) {
 // Add the less than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testLessOrEqual(val) {
-    if (val) {  // Change this line
+    if (val <= 12) {  // Change this line
       return "Smaller Than or Equal to 12";
     }
   
-    if (val) {  // Change this line
+    if (val <= 24) {  // Change this line
       return "Smaller Than or Equal to 24";
     }
   
@@ -1260,10 +1264,10 @@ function testLessOrEqual(val) {
 function testLogicalAnd(val) {
     // Only change code below this line
   
-    if (val) {
-      if (val) {
+    if (val <= 50 && val >= 25) {
+       
         return "Yes";
-      }
+      
     }
   
     // Only change code above this line
@@ -1296,14 +1300,10 @@ function testLogicalAnd(val) {
 function testLogicalOr(val) {
     // Only change code below this line
   
-    if (val) {
+    if (val < 10 || val > 20 ) {
       return "Outside";
     }
-  
-    if (val) {
-      return "Outside";
-    }
-  
+    
     // Only change code above this line
     return "Inside";
   }
@@ -1319,24 +1319,23 @@ function testLogicalOr(val) {
 //   return "10 or Less";
 // }
 // Combine the if statements into a single if/else statement.
+
 function testElse(val) {
     var result = "";
     // Only change code below this line
   
     if (val > 5) {
       result = "Bigger than 5";
-    }
-  
-    if (val <= 5) {
-      result = "5 or Smaller";
-    }
-  
-    // Only change code above this line
+      return result;
+
+    } else {
+
+    result = "5 or Smaller";
     return result;
   }
-  
-  testElse(4);
 
+}
+testElse(4);
 //   67 Basic JavaScript: Introducing Else If Statements
 // If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
 
@@ -1351,16 +1350,14 @@ function testElse(val) {
 function testElseIf(val) {
     if (val > 10) {
       return "Greater than 10";
-    }
-  
-    if (val < 5) {
+    } else if (val < 5) {
       return "Smaller than 5";
+    } else {
+      return "Between 5 and 10";
     }
-  
-    return "Between 5 and 10";
+    
   }
   
-  testElseIf(7);
 
 //   68 Basic JavaScript: Logical Order in If Else Statements
 // Order is important in if, else if statements.
@@ -1397,10 +1394,10 @@ function testElseIf(val) {
 // bar(0) // "Less than two"
 // Change the order of logic in the function so that it will return the correct statements in all cases.
 function orderMyLogic(val) {
-    if (val < 10) {
-      return "Less than 10";
-    } else if (val < 5) {
+    if (val < 5) {
       return "Less than 5";
+    } else if (val < 10) {
+      return "Less than 10";
     } else {
       return "Greater than or equal to 10";
     }
@@ -1431,9 +1428,17 @@ function orderMyLogic(val) {
 
 function testSize(num) {
     // Only change code below this line
-  
-  
-    return "Change Me";
+  if (num < 5) {
+    return "Tiny";
+  } else if (num < 10){
+    return "Small";
+  } else if (num < 15){
+    return "Medium";
+  } else if (num < 20){
+    return "Large";
+  } else if (num >= 20) {
+    return "Huge";
+  }
     // Only change code above this line
   }
   
@@ -1456,9 +1461,22 @@ function testSize(num) {
 var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 function golfScore(par, strokes) {
   // Only change code below this line
+if (strokes == 1){
+  return "Hole-in-one!"
+} else if (strokes <= par -2){
+  return "Eagle"
+} else if (strokes == par - 1){
+  return "Birdie"
+} else if (strokes == par){
+  return "Par"
+} else if (strokes == par + 1){
+  return "Bogey"
+} else if (strokes == par + 2){
+  return "Double Bogey"
+} else {
+  return "Go Home!"
+}
 
-
-  return "Change Me";
   // Only change code above this line
 }
 
