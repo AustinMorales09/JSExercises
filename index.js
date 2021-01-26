@@ -1508,8 +1508,21 @@ golfScore(5, 4);
 function caseInSwitch(val) {
   var answer = "";
   // Only change code below this line
+    switch (val) {
+      case 1: 
+        return "Alpha";
+        break;
+      case 2:
+        return "Beta";
+        break;
+      case 3:
+        return 'gamma';
+        break;
+      case 4:
+        return 'Delta';
+        break;
 
-
+}
 
   // Only change code above this line
   return answer;
@@ -1542,10 +1555,20 @@ caseInSwitch(1);
 function switchOfStuff(val) {
   var answer = "";
   // Only change code below this line
+switch (val) {
+  case "a": 
+    return "apple";
+    break;
+  case "b":
+    return "bird";
+    break;
+  case "c":
+    return "cat";
+    break;
+  default:
+    return "stuff"
+}
 
-
-
-  // Only change code above this line
   return answer;
 }
 
@@ -1577,7 +1600,23 @@ switchOfStuff(1);
 function sequentialSizes(val) {
   var answer = "";
   // Only change code below this line
-
+switch (val) {
+  case 1:
+  case 2:
+  case 3:
+    return "Low"
+    break;
+  case 4:
+  case 5:
+  case 6:
+    return "Mid"
+    break;
+  case 7:
+  case 8: 
+  case 9: 
+    return "High";
+    break;
+}
 
 
   // Only change code above this line
@@ -1615,18 +1654,23 @@ sequentialSizes(1);
 function chainToSwitch(val) {
   var answer = "";
   // Only change code below this line
-
-  if (val === "bob") {
-    answer = "Marley";
-  } else if (val === 42) {
+switch(val) {
+  case 'bob':
+    answer = 'Marley';
+    break;
+  case 42: 
     answer = "The Answer";
-  } else if (val === 1) {
-    answer = "There is no #1";
-  } else if (val === 99) {
-    answer = "Missed me by this much!";
-  } else if (val === 7) {
-    answer = "Ate Nine";
-  }
+    break;
+  case 1:
+    answer = "There is no #1"
+    break;
+  case 99: 
+    answer = 'Missed me by this much !'
+    break;
+  case 7: 
+    answer = 'Ate nine'
+    break;
+}
 
   // Only change code above this line
   return answer;
@@ -1656,11 +1700,7 @@ chainToSwitch(7);
 
 function isLess(a, b) {
   // Only change code below this line
-  if (a < b) {
-    return true;
-  } else {
-    return false;
-  }
+ return a < b;
   // Only change code above this line
 }
 
@@ -1687,8 +1727,9 @@ isLess(10, 15);
 // Setup
 function abTest(a, b) {
   // Only change code below this line
-
-
+if (a < 0 || b < 0){
+  return undefined;
+}
 
   // Only change code above this line
 
@@ -1723,9 +1764,28 @@ var count = 0;
 
 function cc(card) {
   // Only change code below this line
+switch (card){
+  case 2:
+  case 3: 
+  case 4:
+  case 5:
+  case 6:
+    count++;
+    break;
+  case 10:
+  case "J":
+  case "K":
+  case "Q":
+  case "A":
+    count--;
+    break;
+}
 
-
-  return "Change Me";
+if (count > 0) {
+  return count + " Bet"
+} else {
+  return count + " Hold"
+}
   // Only change code above this line
 }
 
@@ -1761,7 +1821,10 @@ cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 var myDog = {
   // Only change code below this line
-  
+  "name" : "Fido",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ['mailman', 'thunder'] 
   
   // Only change code above this line
   };
@@ -1790,8 +1853,8 @@ var testObj = {
 
 // Only change code below this line
 
-var hatValue = testObj;      // Change this line
-var shirtValue = testObj;    // Change this line
+var hatValue = testObj.hat;      // Change this line
+var shirtValue = testObj.shirt;    // Change this line
 
 // 80 Basic JavaScript: Accessing Object Properties with Bracket Notation
 // The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
@@ -1821,8 +1884,8 @@ var testObj = {
 
 // Only change code below this line
 
-var entreeValue = testObj;   // Change this line
-var drinkValue = testObj;    // Change this line
+var entreeValue = testObj["an entree"];   // Change this line
+var drinkValue = testObj['the drink'];    // Change this line
 
 
 // 81 Basic JavaScript: Accessing Object Properties with Variables
@@ -1859,8 +1922,8 @@ var testObj = {
 
 // Only change code below this line
 
-var playerNumber;       // Change this line
-var player = testObj;   // Change this line
+var playerNumber = 16;       // Change this line
+var player = testObj[playerNumber];   // Change this line
 
 // 82 Basic JavaScript: Updating Object Properties
 // After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
@@ -1886,7 +1949,8 @@ var myDog = {
 };
 
 // Only change code below this line
-
+myDog.name = "Happy Coder!"
+myDog["name"] = "happy coder"
 
 // 83 Basic JavaScript: Add New Properties to a JavaScript Object
 // You can add new properties to existing JavaScript objects the same way you would modify them.
@@ -1921,7 +1985,8 @@ var myDog = {
 };
 
 // Only change code below this line
-
+myDog.bark = 'woof';
+myDog['bark'] = 'woof';
 
 // 84 Basic JavaScript: Delete Properties from a JavaScript Object
 // We can also delete properties from objects like this:
@@ -1958,7 +2023,7 @@ var myDog = {
 };
 
 // Only change code below this line
-
+delete myDog.tails 
 
 
 // 85 Basic JavaScript: Using Objects for Lookups
@@ -1986,29 +2051,16 @@ var myDog = {
 // Setup
 function phoneticLookup(val) {
   var result = "";
-
-  // Only change code below this line
-  switch(val) {
-    case "alpha":
-      result = "Adams";
-      break;
-    case "bravo":
-      result = "Boston";
-      break;
-    case "charlie":
-      result = "Chicago";
-      break;
-    case "delta":
-      result = "Denver";
-      break;
-    case "echo":
-      result = "Easy";
-      break;
-    case "foxtrot":
-      result = "Frank";
+  var lookup = {
+    "alpha" : "Adams",
+    "bravo" : "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
   }
 
-  // Only change code above this line
+  result = lookup[val];
   return result;
 }
 
@@ -2028,7 +2080,7 @@ phoneticLookup("charlie");
 // Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
 function checkObj(obj, checkProp) {
   // Only change code below this line
-  return "Change Me!";
+  return obj.hasOwnProperty(checkProp);
   // Only change code above this line
 }
 
@@ -2079,8 +2131,19 @@ var myMusic = [
       "LP"
     ],
     "gold": true
+  },
+  {
+    "artist": "Lil Wayne",
+    "title": "Tha Carter V",
+    "release_year": 2020,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "platinum": true
   }
-  // Add a record here
+
 ];
 
 
@@ -2119,7 +2182,7 @@ var myStorage = {
   }
 };
 
-var gloveBoxContents = undefined; // Change this line
+var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
 
 // 89 Basic JavaScript: Accessing Nested Arrays
 // As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.
@@ -2169,7 +2232,7 @@ var myPlants = [
 
 // Only change code below this line
 
-var secondTree = ""; // Change this line
+var secondTree = myPlants[1].list[1]; // Change this line
 
 
 // 90 Basic JavaScript: Record Collection
@@ -2178,10 +2241,6 @@ var secondTree = ""; // Change this line
 // You start with an updateRecords function that takes an object like collection, an id, a prop (like artist or tracks), and a value. Complete the function using the rules below to modify the object passed to the function.
 
 // Your function must always return the entire object.
-// If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
-// If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
-// If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
-// If value is an empty string, delete the given prop property from the album.
 // Note: A copy of the collection object is used for the tests.
 // Setup
 var collection = {
@@ -2206,6 +2265,24 @@ var collection = {
 
 // Only change code below this line
 function updateRecords(object, id, prop, value) {
+// If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
+  if (prop !== 'tracks' && value !== ''){
+    object[id][prop] = value;
+  } 
+// If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
+  else if (prop === 'tracks' && !object[id].hasOwnProperty('tracks') ){
+    object[id][prop] = [value];
+  } 
+// If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
+  
+  else if (prop === "track" && value !== ''){
+    object[id][prop].push(value);
+  } 
+// If value is an empty string, delete the given prop property from the album.
+  else if (value === ""){
+    delete object[id][prop];
+  }
+
   return object;
 }
 
@@ -2232,7 +2309,11 @@ updateRecords(collection, 5439, 'artist', 'ABBA');
 var myArray = [];
 
 // Only change code below this line
-
+var i = 5;
+while(i >= 0){
+  myArray.push(i);
+  i--;
+}
 // 92 Basic JavaScript: Iterate with JavaScript For Loops
 // You can run the same code multiple times by using a loop.
 
@@ -2260,10 +2341,12 @@ var myArray = [];
 
 
 // Setup
-var myArray = [];
+var newArray = [];
 
 // Only change code below this line
-
+for(var i = 1; i < 6; i++){
+  newArray.push(i);
+}
 // 93 Basic JavaScript: Iterate Odd Numbers With a For Loop
 // For loops don't have to iterate one at a time. By changing our final-expression, we can count by even numbers.
 
@@ -2280,7 +2363,9 @@ var myArray = [];
 var myArray = [];
 
 // Only change code below this line
-
+for (var i = 1; i < 10; i += 2) {
+  myArray.push(i);
+}
 
 // 94 Basic JavaScript: Count Backwards With a For Loop
 // A for loop can also count backwards, so long as we can define the right conditions.
@@ -2300,7 +2385,9 @@ var myArray = [];
 var myArray = [];
 
 // Only change code below this line
-
+for (var i = 9; i > 0; i -= 2) {
+  myArray.push(i);
+}
 
 
 // 95 Basic JavaScript: Iterate Through an Array with a For Loop
@@ -2318,7 +2405,9 @@ var myArray = [];
 var myArr = [ 2, 3, 4, 5, 6];
 
 // Only change code below this line
-
+for(var i = 0; i < myArr.length; i++){
+  total += myArr[i];
+}
 // 96 Basic JavaScript: Nesting For Loops
 // If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
 
