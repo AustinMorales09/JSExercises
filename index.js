@@ -217,6 +217,8 @@ var ourDecimal = 5.7;
 // Change the 0.0 so that product will equal 5.0.
 var product = 2.0 * 0.0;
 
+
+
 // 15 Basic JavaScript: Divide One Decimal by Another with JavaScript
 // Now let's divide one decimal by another.
 
