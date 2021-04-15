@@ -2451,28 +2451,28 @@ multiplyAll([[1,2],[3,4],[5,6,7]]);
 // 97 Basic JavaScript: Iterate with JavaScript Do...While Loops
 // The next type of loop you will learn is called a do...while loop. It is called a do...while loop because it will first do one pass of the code inside the loop no matter what, and then continue to run the loop while the specified condition evaluates to true.
 
-// var ourArray = [];
-// var i = 0;
-// do {
-//   ourArray.push(i);
-//   i++;
-// } while (i < 5);
+var ourArray = [];
+var i = 0;
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
 // The example above behaves similar to other types of loops, and the resulting array will look like [0, 1, 2, 3, 4]. However, what makes the do...while different from other loops is how it behaves when the condition fails on the first check. Let's see this in action: Here is a regular while loop that will run the code in the loop as long as i < 5:
 
-// var ourArray = []; 
-// var i = 5;
-// while (i < 5) {
-//   ourArray.push(i);
-//   i++;
-// }
+var ourArray = []; 
+var i = 5;
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
 // In this example, we initialize the value of ourArray to an empty array and the value of i to 5. When we execute the while loop, the condition evaluates to false because i is not less than 5, so we do not execute the code inside the loop. The result is that ourArray will end up with no values added to it, and it will still look like [] when all of the code in the example above has completed running. Now, take a look at a do...while loop:
 
-// var ourArray = []; 
-// var i = 5;
-// do {
-//   ourArray.push(i);
-//   i++;
-// } while (i < 5);
+var ourArray = []; 
+var i = 5;
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
 // In this case, we initialize the value of i to 5, just like we did with the while loop. When we get to the next line, there is no condition to evaluate, so we go to the code inside the curly braces and execute it. We will add a single element to the array and then increment i before we get to the condition check. When we finally evaluate the condition i < 5 on the last line, we see that i is now 6, which fails the conditional check, so we exit the loop and are done. At the end of the above example, the value of ourArray is [5]. Essentially, a do...while loop ensures that the code inside the loop will run at least once. Let's try getting a do...while loop to work by pushing values to an array.
 
 // Change the while loop in the code to a do...while loop so the loop will push only the number 10 to myArray, and i will be equal to 11 when your code has finished running.
@@ -2482,30 +2482,30 @@ var myArray = [];
 var i = 10;
 
 // Only change code below this line
-while (i < 5) {
+do {
   myArray.push(i);
   i++;
-}
+}while (i < 10);
 
 // 98 Basic JavaScript: Replace Loops using Recursion
 // Recursion is the concept that a function can be expressed in terms of itself. To help understand this, start by thinking about the following task: multiply the first n elements of an array to create the product of those elements. Using a for loop, you could do this:
 
-//   function multiply(arr, n) {
-//     var product = 1;
-//     for (var i = 0; i < n; i++) {
-//         product *= arr[i];
-//     }
-//     return product;
-//   }
+  function multiply(arr, n) {
+    var product = 1;
+    for (var i = 0; i < n; i++) {
+        product *= arr[i];
+    }
+    return product;
+  }
 // However, notice that multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]. That means you can rewrite multiply in terms of itself and never need to use a loop.
 
-//   function multiply(arr, n) {
-//     if (n <= 0) {
-//       return 1;
-//     } else {
-//       return multiply(arr, n - 1) * arr[n - 1];
-//     }
-//   }
+  function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  }
 // The recursive version of multiply breaks down like this. In the base case, where n <= 0, it returns 1. For larger values of n, it calls itself, but with n - 1. That function call is evaluated in the same way, calling multiply again until n <= 0. At this point, all the functions can return and the original multiply returns the answer.
 
 // Note: Recursive functions must have a base case when they return without calling the function again (in this example, when n <= 0), otherwise they can never finish executing.
@@ -2514,7 +2514,11 @@ while (i < 5) {
 
 function sum(arr, n) {
   // Only change code below this line
-
+if(n <= 0){
+  return 0;
+} else {
+    return sum(arr, n-1) + arr[n-1];
+}
   // Only change code above this line
 }
 
@@ -2558,14 +2562,38 @@ var contacts = [
   }
 ];
 
-
+// marquis's solution
 function lookUpProfile(name, prop){
-// Only change code below this line
+for(var i = 0; i < contacts.length; i++){
+  if(contacts[i].firstName === name && contacts[i].hasOwnProperty(prop)){
+      return contacts[i][prop];
+    } else{
+      return "No such property";
+    }
+  }
 
-// Only change code above this line
+  return "No such Contact";
 }
 
 lookUpProfile("Akira", "likes");
+
+
+function lookUpProfile(name, prop){
+  for (var i = 0; i < contacts.length; i++){
+    if(contacts[i].firstName === name){
+      if(contacts[i].hasOwnProperty(prop)){
+        return contacts[i][prop];
+      } else {
+        return "No such property"
+      }
+    }
+  }
+  return "No such contact"
+  
+  
+  }
+  
+  lookUpProfile("Akira", "likes");
 
 // 100 Basic JavaScript: Generate Random Fractions with JavaScript
 // Random numbers are useful for creating random behavior.
@@ -2580,7 +2608,7 @@ function randomFraction() {
 
   // Only change code below this line
 
-  return 0;
+  return Math.random();
 
   // Only change code above this line
 }
@@ -2604,7 +2632,7 @@ function randomWholeNum() {
 
   // Only change code below this line
 
-  return Math.random();
+  return Math.floor(Math.random() * 20 );
 }
 
 // 102 Basic JavaScript: Generate Random Whole Numbers within a Range
@@ -2620,40 +2648,45 @@ function randomWholeNum() {
 
 function randomRange(myMin, myMax) {
   // Only change code below this line
-  return 0;
+  return Math.floor(Math.random() * (myMax - myMin + 1) 
+  + myMin)
   // Only change code above this line
 }
 
 // 103 Basic JavaScript: Use the parseInt Function
 // The parseInt() function parses a string and returns an integer. Here's an example:
 
-// var a = parseInt("007");
+0
 
 // The above function converts the string "007" to an integer 7. If the first character in the string can't be converted into a number, then it returns NaN.
 
 // Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
 function convertToInteger(str) {
-
+return parseInt(str)
 }
 
 convertToInteger("56");
+convertToInteger("59");
+convertToInteger("29");
+convertToInteger("90");
+convertToInteger("84");
 
 // 104 Basic JavaScript: Use the parseInt Function with a Radix
 // The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
 
 // The function call looks like:
 
-// parseInt(string, radix);
+parseInt(string, radix);
 
 // And here's an example:
 
-// var a = parseInt("11", 2);
+var a = parseInt("11", 2);
 
 // The radix variable says that "11" is in the binary system, or base 2. This example converts the string "11" to an integer 3.
 
 // Use parseInt() in the convertToInteger function so it converts a binary number to an integer and returns it.
 function convertToInteger(str) {
-
+  return parseInt(str, 2)
 }
 
 convertToInteger("10011");
@@ -2663,27 +2696,27 @@ convertToInteger("10011");
 
 // The syntax is:
 
-// condition ? expression-if-true : expression-if-false;
+condition ? expression-if-true : expression-if-false;
 
 // The following function uses an if-else statement to check a condition:
 
-// function findGreater(a, b) {
-//   if(a > b) {
-//     return "a is greater";
-//   }
-//   else {
-//     return "b is greater";
-//   }
-// }
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
 // This can be re-written using the conditional operator:
 
-// function findGreater(a, b) {
-//   return a > b ? "a is greater" : "b is greater";
-// }
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater";
+}
 // Use the conditional operator in the checkEqual function to check if two numbers are equal or not. The function should return either "Equal" or "Not Equal".
 
 function checkEqual(a, b) {
-
+  return a === b ? "Equal" : "Not equal"
 }
 
 checkEqual(1, 2);
@@ -2695,23 +2728,30 @@ checkEqual(1, 2);
 
 // For example, say you want to write a recursive function that returns an array containing the numbers 1 through n. This function will need to accept an argument, n, representing the final number. Then it will need to call itself with progressively smaller values of n until it reaches 1. You could write the function as follows:
 
-// function countup(n) {
-//   if (n < 1) {
-//     return [];
-//   } else {
-//     const countArray = countup(n - 1);
-//     countArray.push(n);
-//     return countArray;
-//   }
-// }
-// console.log(countup(5)); // [ 1, 2, 3, 4, 5 ]
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(5)); // [ 1, 2, 3, 4, 5 ]
 // At first, this seems counterintuitive since the value of n decreases, but the values in the final array are increasing. This happens because the push happens last, after the recursive call has returned. At the point where n is pushed into the array, countup(n - 1) has already been evaluated and returned [1, 2, ..., n - 1].
 
 // We have defined a function called countdown with one parameter (n). The function should use recursion to return an array containing the integers n through 1 based on the n parameter. If the function is called with a number less than 1, the function should return an empty array. For example, calling this function with n = 5 should return the array [5, 4, 3, 2, 1]. Your function must use recursion by calling itself and must not use loops of any kind.
 
 // Only change code below this line
 function countdown(n){
-  return;
+ if (n < 1){
+   return [];
+ } else {
+   var arr = countdown(n-1);
+  //  const arr = countdown(n-1);
+   arr.unshift(n)
+   return arr;
+ }
 }
 // Only change code above this line
 
@@ -2722,5 +2762,22 @@ function countdown(n){
 
 // We have defined a function named rangeOfNumbers with two parameters. The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same.
 function rangeOfNumbers(startNum, endNum) {
-  return [];
+if(endNum - startNum === 0){
+return [startNum];
+} else {
+  var numbers = rangeOfNumbers(startNum, endNum -1);
+  numbers.push(endNum);
+  return numbers;
+}
 };
+
+function countdown(n){
+  if (n < 1){
+    return [];
+  } else {
+    var arr = countdown(n-1);
+   //  const arr = countdown(n-1);
+    arr.unshift(n)
+    return arr;
+  }
+ }
