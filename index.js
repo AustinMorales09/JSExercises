@@ -384,24 +384,26 @@ var myStr = "This is the start. " + "This is the end."; // Change this line
 
 // Example:
 
-// var ourStr = "I come first. ";
-// ourStr += "I come second.";
+var ourStr = "I come first. ";
+ourStr += "I come second.";
 // // ourStr is now "I come first. I come second."
 // Build myStr over several lines by concatenating these two strings: "This is the first sentence. " and "This is the second sentence." using the += operator. Use the += operator similar to how it is shown in the editor. Start by assigning the first string to myStr, then add on the second string.
 
-var myStr;
+var myStr = "This is the first sentence. ";
+myStr += "This is the second sentence";
 
 // 25 Basic JavaScript: Constructing Strings with Variables
 // Sometimes you will need to build a string, Mad Libs style. By using the concatenation operator (+), you can insert one or more variables into a string you're building.
 
 // Example:
 
-// var ourName = "Zorkbork";
-// var ourStr = "Hello, our name is " + ourName + ", how are you?";
-// // ourStr is now "Hello, our name is Zorkbork, how are you?"
+var ourName = "Zorkbork";
+var ourStr = "Hello, our name is " + ourName + ", how are you?";
+// ourStr is now "Hello, our name is Zorkbork, how are you?"
 // Set myName to a string equal to your name and build myStr with myName between the strings "My name is " and " and I am well!"
-var myName;
-var myStr;
+var myName = 'Austin';
+
+var myStr = "My name is " + myName + " and I am well!"
 
 
 // 26 Basic JavaScript: Appending Variables to Strings
@@ -409,21 +411,23 @@ var myStr;
 
 // Example:
 
-// var anAdjective = "awesome!";
-// var ourStr = "Austin is ";
-// ourStr += anAdjective;
+var anAdjective = "awesome!";
+var ourStr = "Austin is ";
+ourStr += anAdjective;
 // ourStr is now "Austin is awesome!"
 // Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator.
 
 // Change code below this line
 
-var someAdjective;
+var someAdjective = "Fun"
 var myStr = "Learning to code is ";
+
+myStr += someAdjective;
 
 // 27 Basic JavaScript: Find the Length of a String
 // You can find the length of a String value by writing .length after the string variable or string literal.
 
-// "Alan Peter".length; // 10
+"Alan Peter".length; // 10
 
 // For example, if we created a variable var firstName = "Charles", we could find out how long the string "Charles" is by using the firstName.length property.
 
@@ -434,7 +438,7 @@ var lastName = "Lovelace";
 
 // Only change code below this line
 
-lastNameLength = lastName;
+lastNameLength = lastName.length;
 
 // 28 Basic JavaScript: Use Bracket Notation to Find the First Character in a String
 
@@ -446,29 +450,25 @@ lastNameLength = lastName;
 
 // Example:
 
-// var firstName = "Charles";
-// var firstLetter = firstName[0]; // firstLetter is "C"
+var firstName = "Charles";
+var firstLetter = firstName[0]; // firstLetter is "C"
 // Use bracket notation to find the first character in the lastName variable and assign it to firstLetterOfLastName.
 
 // Hint: Try looking at the example above if you get stuck.
 // Setup
-var firstLetterOfLastName = "";
-var lastName = "Lovelace";
-
-// Only change code below this line
-firstLetterOfLastName = lastName; // Change this line
+7// Change this line
 
 // 29 Basic JavaScript: Understand String Immutability
 // In JavaScript, String values are immutable, which means that they cannot be altered once created.
 
 // For example, the following code:
 
-// var myStr = "Bob";
-// myStr[0] = "J";
+var myStr = "Bob";
+myStr[0] = "J";
 // cannot change the value of myStr to "Job", because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. The only way to change myStr would be to assign it with a new string, like this:
 
-// var myStr = "Bob";
-// myStr = "Job";
+var myStr = "Bob";
+myStr = "Job";
 // Correct the assignment to myStr so it contains the string value of Hello World using the approach shown in the example above.
 
 
@@ -476,7 +476,7 @@ firstLetterOfLastName = lastName; // Change this line
 var myStr = "Jello World";
 
 // Only change code below this line
-myStr[0] = "H"; // Change this line
+myStr = "Hello World"; // Change this line
 // Only change code above this line
 
 //30 Basic JavaScript: Use Bracket Notation to Find the Nth Character in a String
@@ -487,14 +487,14 @@ myStr[0] = "H"; // Change this line
 
 // Example:
 
-// var firstName = "Ada";
-// var secondLetterOfFirstName = firstName[1]; // secondLetterOfFirstName is "d"
+var firstName = "Ada";
+var secondLetterOfFirstName = firstName[1]; // secondLetterOfFirstName is "d"
 // Let's try to set thirdLetterOfLastName to equal the third letter of the lastName variable using bracket notation.
 // Setup
 var lastName = "Lovelace";
 
 // Only change code below this line
-var thirdLetterOfLastName = lastName; // Change this line
+var thirdLetterOfLastName = lastName[2]; // Change this line
 
 // 31 Basic JavaScript: Use Bracket Notation to Find the Last Character in a String
 // In order to get the last letter of a string, you can subtract one from the string's length.
@@ -503,8 +503,8 @@ var thirdLetterOfLastName = lastName; // Change this line
 
 // Example:
 
-// var firstName = "Charles";
-// var lastLetter = firstName[firstName.length - 1]; // lastLetter is "s"
+var firstName = "Charles";
+var lastLetter = firstName[firstName.length - 1]; // lastLetter is "s"
 // Use bracket notation to find the last character in the lastName variable.
 
 // Hint: Try looking at the example above if you get stuck.
@@ -512,7 +512,7 @@ var thirdLetterOfLastName = lastName; // Change this line
 var lastName = "Lovelace";
 
 // Only change code below this line
-var lastLetterOfLastName = lastName; // Change this line
+var lastLetterOfLastName = lastName[lastName.length - 1] // Change this line
 
 // 32 Basic JavaScript: Use Bracket Notation to Find the Nth-to-Last Character in a String
 // You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.
@@ -530,7 +530,7 @@ var lastLetterOfLastName = lastName; // Change this line
 var lastName = "Lovelace";
 
 // Only change code below this line
-var secondToLastLetterOfLastName = lastName; // Change this line
+var secondToLastLetterOfLastName = lastName[lastName.length -2]; // Change this line
 
 // 33 Basic JavaScript: Word Blanks
 // var wordBlanks = "the" + ' '+ myNoun +" "+ myAdjective+ " " + myVerb +" "+ myAdverb; // Change this line
@@ -539,7 +539,7 @@ var secondToLastLetterOfLastName = lastName; // Change this line
 
 // Consider this sentence - "It was really ____, and we ____ ourselves ____". This sentence has three missing pieces- an adjective, a verb and an adverb, and we can add words of our choice to complete it. We can then assign the completed sentence to a variable as follows:
 
-// var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
+var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
 // In this challenge, we provide you with a noun, a verb, an adjective and an adverb. You need to form a complete sentence using words of your choice, along with the words we provide.
 
 // You will need to use the string concatenation operator + to build a new string, using the provided variables: myNoun, myAdjective, myVerb, and myAdverb. You will then assign the formed string to the wordBlanks variable. You should not change the words assigned to the variables.
@@ -554,5 +554,5 @@ var myVerb = "ran";
 var myAdverb = "quickly";
 
 // Only change code below this line
-var wordBlanks = ""; // Change this line
+var wordBlanks = 'The ' + myAdjective + " " + myNoun + " " + 'got scared and ' + myVerb + ' ' + myAdverb;
 // Only change code above this line
