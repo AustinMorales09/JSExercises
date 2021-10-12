@@ -180,7 +180,7 @@ var quotient = 66 / 33;
 var myVar = 87;
 
 // Only change code below this line
-myVar = myVar + 1;
+myVar++;
 
 // 12 Basic JavaScript: Decrement a Number with JavaScript
 // You can easily decrement or decrease a variable by one with the -- operator.
@@ -198,7 +198,7 @@ myVar = myVar + 1;
 var myVar = 11;
 
 // Only change code below this line
-myVar = myVar - 1;
+myVar--;
 
 // 13 Basic JavaScript: Create Decimal Numbers with JavaScript
 // We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as floating point numbers or floats.
@@ -208,28 +208,28 @@ myVar = myVar - 1;
 var ourDecimal = 5.7;
 
 // Only change code below this line
-
+var myDecimal = 2.2;
 //14 Basic JavaScript: Multiply Two Decimals with JavaScript
 // In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
 
 // Let's multiply two decimals together to get their product.
 
 // Change the 0.0 so that product will equal 5.0.
-var product = 2.0 * 0.0;
+var product = 2.0 * 2.5;
 
 // 15 Basic JavaScript: Divide One Decimal by Another with JavaScript
 // Now let's divide one decimal by another.
 
 // Change the 0.0 so that quotient will equal to 2.2.
-var quotient = 0.0 / 2.0; // Change this line
+var quotient = 4.4 / 2.0; // Change this line
 
 // 16 Basic JavaScript: Finding a Remainder in JavaScript
 // The remainder operator % gives the remainder of the division of two numbers.
 
 // Example
 
-// 5 % 2 = 1 because
-// Math.floor(5 / 2) = 2 (Quotient)
+5 % 2 = 1 because
+Math.floor(5 / 2) = 2 (Quotient)
 // 2 * 2 = 4
 // 5 - 4 = 1 (Remainder)
 // Usage
@@ -243,7 +243,7 @@ var quotient = 0.0 / 2.0; // Change this line
 // Set remainder equal to the remainder of 11 divided by 3 using the remainder (%) operator.
 // Only change code below this line
 
-var remainder;
+var remainder = 11 % 3
 
 // 17 Basic JavaScript: Compound Assignment With Augmented Addition
 // In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
@@ -267,9 +267,9 @@ var b = 17;
 var c = 12;
 
 // Only change code below this line
-a = a + 12;
-b = 9 + b;
-c = c + 7;
+a += 12;
+b += 9;
+c += 7;
 
 // 18 Basic JavaScript: Compound Assignment With Augmented Subtraction
 // Like the += operator, -= subtracts a number from a variable.
@@ -287,9 +287,9 @@ var b = 9;
 var c = 3;
 
 // Only change code below this line
-a = a - 6;
-b = b - 15;
-c = c - 1;
+a -= 6;
+b -= 15;
+c -= 1;
 
 // 19 Basic JavaScript: Compound Assignment With Augmented Multiplication
 // The *= operator multiplies a variable by a number.
@@ -307,9 +307,9 @@ var b = 12;
 var c = 4.6;
 
 // Only change code below this line
-a = a * 5;
-b = 3 * b;
-c = c * 10;
+a *= 5;
+b *= 3;
+c *= 10;
 
 // 20 Basic JavaScript: Compound Assignment With Augmented Division
 // The /= operator divides a variable by another number.
@@ -326,9 +326,9 @@ var b = 108;
 var c = 33;
 
 // Only change code below this line
-a = a / 12;
-b = b / 4;
-c = c / 11;
+a /= 12;
+b /= 4;
+c /= 11;
 
 // 21 Basic JavaScript: Declare String Variables
 // Previously we have used the code
@@ -339,6 +339,8 @@ c = c / 11;
 
 // Create two new string variables: myFirstName and myLastName and assign them the values of your first and last name, respectively.
 
+var myFirstName = 'Austin';
+var myLastName = "Morales";
 
 
 // 22 Basic JavaScript: Escaping Literal Quotes in Strings
@@ -346,7 +348,7 @@ c = c / 11;
 
 // In JavaScript, you can escape a quote from considering it as an end of string quote by placing a backslash (\) in front of the quote.
 
-// var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
 
 // This signals to JavaScript that the following quote is not the end of the string, but should instead appear inside the string. So if you were to print this to the console, you would get:
 
@@ -355,7 +357,7 @@ c = c / 11;
 // Use backslashes to assign a string to the myStr variable so that if you were to print it to the console, you would see:
 
 // I am a "double quoted" string inside "double quotes".
-var myStr = ""; // Change this line
+var myStr = "I am a \"double quoted\" string inside \"double quotes\""; // Change this line
 
 // 23 Basic JavaScript: Concatenating Strings with Plus Operator
 // In JavaScript, when the + operator is used with a String value, it is called the concatenation operator. You can build a new string out of other strings by concatenating them together.
@@ -372,7 +374,7 @@ var myStr = ""; // Change this line
 // // ourStr is "I come first. I come second."
 // Build myStr from the strings "This is the start. " and "This is the end." using the + operator.
 
-var myStr; // Change this line
+var myStr = "This is the start. " + "This is the end."; // Change this line
 
 // 24 Basic JavaScript: Concatenating Strings with the Plus Equals Operator
 // We can also use the += operator to concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.
