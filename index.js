@@ -1498,14 +1498,14 @@ golfScore(5, 4);
 
 // Here is an example of a switch statement:
 
-// switch(lowercaseLetter) {
-//   case "a":
-//     console.log("A");
-//     break;
-//   case "b":
-//     console.log("B");
-//     break;
-// }
+switch(lowercaseLetter) {
+  case "a":
+    console.log("A");
+    break;
+  case "b":
+    console.log("B");
+    break;
+}
 // case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed.
 
 // Write a switch statement which tests val and sets answer for the following conditions:
@@ -1518,7 +1518,20 @@ golfScore(5, 4);
 function caseInSwitch(val) {
   var answer = "";
   // Only change code below this line
-
+switch(val){
+  case 1:
+    return "Alpha";
+    break;
+  case 2: 
+    return "beta";
+    break;
+  case 3:
+    return "gamma";
+    break;
+  case 4:
+    return "delta";
+    break;
+}
 
 
   // Only change code above this line
@@ -1532,18 +1545,18 @@ caseInSwitch(1);
 
 // A default statement should be the last case.
 
-// switch (num) {
-//   case value1:
-//     statement1;
-//     break;
-//   case value2:
-//     statement2;
-//     break;
-// ...
-//   default:
-//     defaultStatement;
-//     break;
-// }
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
 // Write a switch statement to set answer for the following conditions:
 // "a" - "apple"
 // "b" - "bird"
@@ -1553,8 +1566,20 @@ function switchOfStuff(val) {
   var answer = "";
   // Only change code below this line
 
-
-
+switch(val){
+  case 'a': 
+    return "apple";
+    break;
+  case 'b':
+    return 'bird';
+    break;
+  case 'c':
+    return 'cat';
+    break;
+  default:
+    return 'stuff'
+    break;
+}
   // Only change code above this line
   return answer;
 }
@@ -1565,16 +1590,16 @@ switchOfStuff(1);
 // 73 Basic JavaScript: Multiple Identical Options in Switch Statements
 // If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. If you have multiple inputs with the same output, you can represent them in a switch statement like this:
 
-// var result = "";
-// switch(val) {
-//   case 1:
-//   case 2:
-//   case 3:
-//     result = "1, 2, or 3";
-//     break;
-//   case 4:
-//     result = "4 alone";
-// }
+var result = "";
+switch(val) {
+  case 1:
+  case 2:
+  case 3:
+    result = "1, 2, or 3";
+    break;
+  case 4:
+    result = "4 alone";
+}
 // Cases for 1, 2, and 3 will all produce the same result.
 
 // Write a switch statement to set answer for the following ranges:
@@ -1587,7 +1612,23 @@ switchOfStuff(1);
 function sequentialSizes(val) {
   var answer = "";
   // Only change code below this line
-
+switch(val){
+  case 1:
+  case 2:
+  case 3:
+    return "Low";
+    break;
+  case 4:
+  case 5:
+  case 6:
+    return "Mid";
+    break;
+  case 7:
+  case 8:
+  case 9:
+    return 'High';
+    break;
+}
 
 
   // Only change code above this line
@@ -1601,42 +1642,62 @@ sequentialSizes(1);
 // 74 Basic JavaScript: Replacing If Else Chains with Switch
 // If you have many options to choose from, a switch statement can be easier to write than many chained if/else if statements. The following:
 
-// if (val === 1) {
-//   answer = "a";
-// } else if (val === 2) {
-//   answer = "b";
-// } else {
-//   answer = "c";
-// }
+if (val === 1) {
+  answer = "a";
+} else if (val === 2) {
+  answer = "b";
+} else {
+  answer = "c";
+}
 // can be replaced with:
 
-// switch(val) {
-//   case 1:
-//     answer = "a";
-//     break;
-//   case 2:
-//     answer = "b";
-//     break;
-//   default:
-//     answer = "c";
-// }
+switch(val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+}
 // Change the chained if/else if statements into a switch statement.
 
 function chainToSwitch(val) {
   var answer = "";
   // Only change code below this line
 
-  if (val === "bob") {
-    answer = "Marley";
-  } else if (val === 42) {
+switch(val){
+  case 'bob':
+    answer = 'marley'
+    break;
+  case 42: 
     answer = "The Answer";
-  } else if (val === 1) {
+    break;
+  case 1: 
     answer = "There is no #1";
-  } else if (val === 99) {
-    answer = "Missed me by this much!";
-  } else if (val === 7) {
-    answer = "Ate Nine";
-  }
+    break;
+  case 99:
+    answer = "missed me by this much";
+    break;
+  case 7: 
+    answer="Ate nine";
+    break;
+
+}
+
+
+  // if (val === "bob") {
+  //   answer = "Marley";
+  // } else if (val === 42) {
+  //   answer = "The Answer";
+  // } else if (val === 1) {
+  //   answer = "There is no #1";
+  // } else if (val === 99) {
+  //   answer = "Missed me by this much!";
+  // } else if (val === 7) {
+  //   answer = "Ate Nine";
+  // }
 
   // Only change code above this line
   return answer;
@@ -1650,27 +1711,24 @@ chainToSwitch(7);
 
 // Sometimes people use an if/else statement to do a comparison, like this:
 
-// function isEqual(a,b) {
-//   if (a === b) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-// But there's a better way to do this. Since === returns true or false, we can return the result of the comparison:
-
-// function isEqual(a,b) {
-//   return a === b;
-// }
-// Fix the function isLess to remove the if/else statements.
-
-function isLess(a, b) {
-  // Only change code below this line
-  if (a < b) {
+function isEqual(a,b) {
+  if (a === b) {
     return true;
   } else {
     return false;
   }
+}
+// But there's a better way to do this. Since === returns true or false, we can return the result of the comparison:
+
+function isEqual(a,b) {
+  return a === b;
+}
+// Fix the function isLess to remove the if/else statements.
+
+function isLess(a, b) {
+  // Only change code below this line
+return a < b;
+
   // Only change code above this line
 }
 
@@ -1682,12 +1740,12 @@ isLess(10, 15);
 
 // Example
 
-// function myFun() {
-//   console.log("Hello");
-//   return "World";
-//   console.log("byebye")
-// }
-// myFun();
+function myFun() {
+  console.log("Hello");
+  return "World";
+  console.log("byebye")
+}
+myFun();
 // The above outputs "Hello" to the console, returns "World", but "byebye" is never output, because the function exits at the return statement.
 
 // Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
@@ -1698,7 +1756,9 @@ isLess(10, 15);
 function abTest(a, b) {
   // Only change code below this line
 
-
+if ( a < 0 || b < 0 ){
+  return undefined;
+}
 
   // Only change code above this line
 
@@ -1733,9 +1793,28 @@ var count = 0;
 
 function cc(card) {
   // Only change code below this line
+switch(card){
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  count++;
+  break;
+  case 10:
+  case "J":
+  case "K":
+  case "Q":
+  case "A":
+    count--;
+    break;
+}
 
-
-  return "Change Me";
+ if (count > 0){
+   return count + " Bet"
+ } else {
+   return count + " Hold"
+ }
   // Only change code above this line
 }
 
@@ -1750,19 +1829,19 @@ cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 // Here's a sample cat object:
 
-// var cat = {
-//   "name": "Whiskers",
-//   "legs": 4,
-//   "tails": 1,
-//   "enemies": ["Water", "Dogs"]
-// };
+var cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
 // In this example, all the properties are stored as strings, such as - "name", "legs", and "tails". However, you can also use numbers as properties. You can even omit the quotes for single-word string properties, as follows:
 
-// var anotherObject = {
-//   make: "Ford",
-//   5: "five",
-//   "model": "focus"
-// };
+var anotherObject = {
+  make: "Ford",
+  5: "five",
+  "model": "focus"
+};
 // However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.
 
 // Make an object that represents a dog called myDog which contains the properties "name" (a string), "legs", "tails" and "friends".
@@ -1771,7 +1850,10 @@ cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 var myDog = {
   // Only change code below this line
-  
+  "name": "clifford",
+  "legs": 4,
+  "tails":2,
+  "friends": ['Cat', 'Human']
   
   // Only change code above this line
   };
@@ -1800,8 +1882,8 @@ var testObj = {
 
 // Only change code below this line
 
-var hatValue = testObj;      // Change this line
-var shirtValue = testObj;    // Change this line
+var hatValue = testObj.hat;    // Change this line
+var shirtValue = testObj.shirt;    // Change this line
 
 // 80 Basic JavaScript: Accessing Object Properties with Bracket Notation
 // The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
@@ -1810,11 +1892,11 @@ var shirtValue = testObj;    // Change this line
 
 // Here is a sample of using bracket notation to read an object's property:
 
-// var myObj = {
-//   "Space Name": "Kirk",
-//   "More Space": "Spock",
-//   "NoSpace": "USS Enterprise"
-// };
+var myObj = {
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
+};
 // myObj["Space Name"]; // Kirk
 // myObj['More Space']; // Spock
 // myObj["NoSpace"];    // USS Enterprise
@@ -1831,8 +1913,8 @@ var testObj = {
 
 // Only change code below this line
 
-var entreeValue = testObj;   // Change this line
-var drinkValue = testObj;    // Change this line
+var entreeValue = testObj["an entree"]   // Change this line
+var drinkValue = testObj["the drink"];    // Change this line
 
 
 // 81 Basic JavaScript: Accessing Object Properties with Variables
@@ -1840,23 +1922,23 @@ var drinkValue = testObj;    // Change this line
 
 // Here is an example of using a variable to access a property:
 
-// var dogs = {
-//   Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"
-// };
-// var myDog = "Hunter";
-// var myBreed = dogs[myDog];
+var dogs = {
+  Fido: "Mutt",  Hunter: "Doberman",  Snoopie: "Beagle"
+};
+var myDog = "Hunter";
+var myBreed = dogs[myDog];
 // console.log(myBreed); // "Doberman"
 // Another way you can use this concept is when the property's name is collected dynamically during the program execution, as follows:
 
-// var someObj = {
-//   propName: "John"
-// };
-// function propPrefix(str) {
-//   var s = "prop";
-//   return s + str;
-// }
+var someObj = {
+  propName: "John"
+};
+function propPrefix(str) {
+  var s = "prop";
+  return s + str;
+}
 // var someProp = propPrefix("Name"); // someProp now holds the value 'propName'
-// console.log(someObj[someProp]); // "John"
+console.log(someObj[someProp]); // "John"
 // Note that we do not use quotes around the variable name when using it to access the property because we are using the value of the variable, not the name.
 
 // Set the playerNumber variable to 16. Then, use the variable to look up the player's name and assign it to player.
@@ -1869,20 +1951,20 @@ var testObj = {
 
 // Only change code below this line
 
-var playerNumber;       // Change this line
-var player = testObj;   // Change this line
+var playerNumber = 16;       // Change this line
+var player = testObj[playerNumber];   // Change this line
 
 // 82 Basic JavaScript: Updating Object Properties
 // After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
 
 // For example, let's look at ourDog:
 
-// var ourDog = {
-//   "name": "Camper",
-//   "legs": 4,
-//   "tails": 1,
-//   "friends": ["everything!"]
-// };
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
 // Since he's a particularly happy dog, let's change his name to "Happy Camper". Here's how we update his object's name property: ourDog.name = "Happy Camper"; or ourDog["name"] = "Happy Camper"; Now when we evaluate ourDog.name, instead of getting "Camper", we'll get his new name, "Happy Camper".
 
 // Update the myDog object's name property. Let's change her name from "Coder" to "Happy Coder". You can use either dot or bracket notation.
@@ -1896,7 +1978,8 @@ var myDog = {
 };
 
 // Only change code below this line
-
+myDog.name = 'Happy Coder';
+myDog['name'] = 'Happy Coder';
 
 // 83 Basic JavaScript: Add New Properties to a JavaScript Object
 // You can add new properties to existing JavaScript objects the same way you would modify them.
@@ -1913,14 +1996,14 @@ var myDog = {
 
 // Example:
 
-// var ourDog = {
-//   "name": "Camper",
-//   "legs": 4,
-//   "tails": 1,
-//   "friends": ["everything!"]
-// };
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
 
-// ourDog.bark = "bow-wow";
+ourDog.bark = "bow-wow";
 // Add a "bark" property to myDog and set it to a dog sound, such as "woof". You may use either dot or bracket notation.
 // Setup
 var myDog = {
@@ -1931,7 +2014,8 @@ var myDog = {
 };
 
 // Only change code below this line
-
+myDog.bark = 'woof';
+myDog['bark'] = 'woof';
 
 // 84 Basic JavaScript: Delete Properties from a JavaScript Object
 // We can also delete properties from objects like this:
@@ -1940,23 +2024,23 @@ var myDog = {
 
 // Example:
 
-// var ourDog = {
-//   "name": "Camper",
-//   "legs": 4,
-//   "tails": 1,
-//   "friends": ["everything!"],
-//   "bark": "bow-wow"
-// };
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
 
-// delete ourDog.bark;
+delete ourDog.bark;
 // After the last line shown above, ourDog looks like:
 
-// {
-//   "name": "Camper",
-//   "legs": 4,
-//   "tails": 1,
-//   "friends": ["everything!"]
-// }
+{
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+}
 // Delete the "tails" property from myDog. You may use either dot or bracket notation.
 // Setup
 var myDog = {
@@ -1969,6 +2053,8 @@ var myDog = {
 
 // Only change code below this line
 
+delete myDog.tails;
+delete myDog['tails'];
 
 
 // 85 Basic JavaScript: Using Objects for Lookups
@@ -1976,17 +2062,17 @@ var myDog = {
 
 // Here is an example of a simple reverse alphabet lookup:
 
-// var alpha = {
-//   1:"Z",
-//   2:"Y",
-//   3:"X",
-//   4:"W",
-//   ...
-//   24:"C",
-//   25:"B",
-//   26:"A"
-// };
-// alpha[2]; // "Y"
+var alpha = {
+  1:"Z",
+  2:"Y",
+  3:"X",
+  4:"W",
+  ...
+  24:"C",
+  25:"B",
+  26:"A"
+};
+alpha[2]; // "Y"
 // alpha[24]; // "C"
 
 // var value = 2;
@@ -1998,28 +2084,18 @@ function phoneticLookup(val) {
   var result = "";
 
   // Only change code below this line
-  switch(val) {
-    case "alpha":
-      result = "Adams";
-      break;
-    case "bravo":
-      result = "Boston";
-      break;
-    case "charlie":
-      result = "Chicago";
-      break;
-    case "delta":
-      result = "Denver";
-      break;
-    case "echo":
-      result = "Easy";
-      break;
-    case "foxtrot":
-      result = "Frank";
-  }
+var lookup = {
+  'alpha': 'Adams',
+  'bravo': 'Boston',
+  'charlie': "Chicago",
+  'delta': 'Denver',
+  'echo': 'Easy',
+  'foxtrot': 'Frank'
+}
+result = lookup[val];
+return result;
 
   // Only change code above this line
-  return result;
 }
 
 phoneticLookup("charlie");
@@ -2029,16 +2105,16 @@ phoneticLookup("charlie");
 
 // Example
 
-// var myObj = {
-//   top: "hat",
-//   bottom: "pants"
-// };
-// myObj.hasOwnProperty("top");    // true
-// myObj.hasOwnProperty("middle"); // false
+var myObj = {
+  top: "hat",
+  bottom: "pants"
+};
+myObj.hasOwnProperty("top");    // true
+myObj.hasOwnProperty("middle"); // false
 // Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
 function checkObj(obj, checkProp) {
   // Only change code below this line
-  return "Change Me!";
+  return obj.hasOwnProperty(checkProp);
   // Only change code above this line
 }
 
@@ -2047,32 +2123,32 @@ function checkObj(obj, checkProp) {
 
 // Here's an example of a complex data structure:
 
-// var ourMusic = [
-//   {
-//     "artist": "Daft Punk",
-//     "title": "Homework",
-//     "release_year": 1997,
-//     "formats": [ 
-//       "CD", 
-//       "Cassette", 
-//       "LP"
-//     ],
-//     "gold": true
-//   }
-// ];
+var ourMusic = [
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [ 
+      "CD", 
+      "Cassette", 
+      "LP"
+    ],
+    "gold": true
+  }
+];
 // This is an array which contains one object inside. The object has various pieces of metadata about an album. It also has a nested "formats" array. If you want to add more album records, you can do this by adding records to the top level array. Objects hold data in a property, which has a key-value format. In the example above, "artist": "Daft Punk" is a property that has a key of "artist" and a value of "Daft Punk". JavaScript Object Notation or JSON is a related data interchange format used to store data.
 
-// {
-//   "artist": "Daft Punk",
-//   "title": "Homework",
-//   "release_year": 1997,
-//   "formats": [ 
-//     "CD",
-//     "Cassette",
-//     "LP"
-//   ],
-//   "gold": true
-// }
+{
+  "artist": "Daft Punk",
+  "title": "Homework",
+  "release_year": 1997,
+  "formats": [ 
+    "CD",
+    "Cassette",
+    "LP"
+  ],
+  "gold": true
+}
 // Note
 // You will need to place a comma after every object in the array, unless it is the last object in the array.
 
@@ -2089,6 +2165,17 @@ var myMusic = [
       "LP"
     ],
     "gold": true
+  },
+  {
+    "artist": "Lil wayne",
+    "title": "Tha Carter V",
+    "release_year": 2020,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
   }
   // Add a record here
 ];
@@ -2099,18 +2186,18 @@ var myMusic = [
 
 // Here is a nested object:
 
-// var ourStorage = {
-//   "desk": {
-//     "drawer": "stapler"
-//   },
-//   "cabinet": {
-//     "top drawer": { 
-//       "folder1": "a file",
-//       "folder2": "secrets"
-//     },
-//     "bottom drawer": "soda"
-//   }
-// };
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": { 
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
 // ourStorage.cabinet["top drawer"].folder2;  // "secrets"
 // ourStorage.desk.drawer; // "stapler"
 // Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
@@ -2129,31 +2216,31 @@ var myStorage = {
   }
 };
 
-var gloveBoxContents = undefined; // Change this line
+var gloveBoxContents = myStorage.car.inside['glove box']; // Change this line
 
 // 89 Basic JavaScript: Accessing Nested Arrays
 // As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.
 
 // Here is an example of how to access a nested array:
 
-// var ourPets = [
-//   {
-//     animalType: "cat",
-//     names: [
-//       "Meowzer",
-//       "Fluffy",
-//       "Kit-Cat"
-//     ]
-//   },
-//   {
-//     animalType: "dog",
-//     names: [
-//       "Spot",
-//       "Bowser",
-//       "Frankie"
-//     ]
-//   }
-// ];
+var ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
 // ourPets[0].names[1]; // "Fluffy"
 // ourPets[1].names[0]; // "Spot"
 // Retrieve the second tree from the variable myPlants using object dot and array bracket notation.
@@ -2179,7 +2266,7 @@ var myPlants = [
 
 // Only change code below this line
 
-var secondTree = ""; // Change this line
+var secondTree = myPlants[1].list[1]; // Change this line
 
 
 // 90 Basic JavaScript: Record Collection
@@ -2214,12 +2301,38 @@ var collection = {
   }
 };
 
+// 1 == 1 true
+// 1 == '1' true
+// 1 === 1 true
+// 1 === '1' false 
+
 // Only change code below this line
 function updateRecords(object, id, prop, value) {
-  return object;
-}
+  // If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
+  if (prop !== 'tracks' && value !== '') { 
+    object[id][prop] = value;
+} 
 
+// If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
+  else if (prop === 'tracks' && !object[id].hasOwnProperty('tracks')) {
+    object[id][prop] = [value];
+
+  }
+  // If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
+  else if (prop === 'tracks' && value !== '') {
+    object[id][prop].push(value);
+  }
+  // If value is an empty string, delete the given prop property from the album.
+  else if (value === '') {
+    delete object[id][prop];
+  }
+  return object;
+
+}
 updateRecords(collection, 5439, 'artist', 'ABBA');
+updateRecords(collection, 1245, 'tracks', 'IDK');
+updateRecords(collection, 1245, 'tracks', 'IDK');
+updateRecords(collection, 1245, 'tracks', 'IDK');
 
 
 // 91 Basic JavaScript: Iterate with JavaScript While Loops
@@ -2227,12 +2340,8 @@ updateRecords(collection, 5439, 'artist', 'ABBA');
 
 // The first type of loop we will learn is called a while loop because it runs "while" a specified condition is true and stops once that condition is no longer true.
 
-// var ourArray = [];
-// var i = 0;
-// while(i < 5) {
-//   ourArray.push(i);
-//   i++;
-// }
+
+}
 // In the code example above, the while loop will execute 5 times and append the numbers 0 through 4 to ourArray.
 
 // Let's try getting a while loop to work by pushing values to an array.
@@ -2243,6 +2352,15 @@ var myArray = [];
 
 // Only change code below this line
 
+var i = 5;
+while(i >= 0){
+  myArray.push(i);
+  i--;
+}
+
+
+
+
 // 92 Basic JavaScript: Iterate with JavaScript For Loops
 // You can run the same code multiple times by using a loop.
 
@@ -2250,8 +2368,8 @@ var myArray = [];
 
 // For loops are declared with three optional expressions separated by semicolons:
 
-// for ([initialization]; [condition]; [final-expression])
-
+for ([initialization]; [condition]; [final-expression])
+// 
 // The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.
 
 // The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When condition is false at the start of the iteration, the loop will stop executing. This means if condition starts as false, your loop will never execute.
@@ -2260,10 +2378,11 @@ var myArray = [];
 
 // In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final-expression.
 
-// var ourArray = [];
-// for (var i = 0; i < 5; i++) {
-//   ourArray.push(i);
-// }
+var ourArray = [];
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
 // ourArray will now contain [0,1,2,3,4].
 
 // Use a for loop to work to push the values 1 through 5 onto myArray.
@@ -2273,6 +2392,9 @@ var myArray = [];
 var myArray = [];
 
 // Only change code below this line
+for(var i = 1; i <= 5; i++){
+myArray.push(i);
+}
 
 // 93 Basic JavaScript: Iterate Odd Numbers With a For Loop
 // For loops don't have to iterate one at a time. By changing our final-expression, we can count by even numbers.
