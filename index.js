@@ -2401,10 +2401,10 @@ myArray.push(i);
 
 // We'll start at i = 0 and loop while i < 10. We'll increment i by 2 each loop with i += 2.
 
-// var ourArray = [];
-// for (var i = 0; i < 10; i += 2) {
-//   ourArray.push(i);
-// }
+var ourArray = [];
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
 // ourArray will now contain [0,2,4,6,8]. Let's change our initialization so we can count by odd numbers.
 
 // Push the odd numbers from 1 through 9 to myArray using a for loop.
@@ -2412,7 +2412,9 @@ myArray.push(i);
 var myArray = [];
 
 // Only change code below this line
-
+for (var i = 1; i <= 9; i += 2){
+  myArray.push(i);
+}
 
 // 94 Basic JavaScript: Count Backwards With a For Loop
 // A for loop can also count backwards, so long as we can define the right conditions.
@@ -2421,10 +2423,10 @@ var myArray = [];
 
 // We'll start at i = 10 and loop while i > 0. We'll decrement i by 2 each loop with i -= 2.
 
-// var ourArray = [];
-// for (var i = 10; i > 0; i -= 2) {
-//   ourArray.push(i);
-// }
+var ourArray = [];
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
 // ourArray will now contain [10,8,6,4,2]. Let's change our initialization and final-expression so we can count backward by twos by odd numbers.
 
 // Push the odd numbers from 9 through 1 to myArray using a for loop.
@@ -2432,7 +2434,7 @@ var myArray = [];
 var myArray = [];
 
 // Only change code below this line
-
+for(var i = )
 
 
 // 95 Basic JavaScript: Iterate Through an Array with a For Loop
