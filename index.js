@@ -216,7 +216,11 @@ myVar--;
 var ourDecimal = 5.7;
 
 // Only change code below this line
-var myDecimal = 3.14159
+
+
+
+
+
 //14 Basic JavaScript: Multiply Two Decimals with JavaScript
 // In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
 
@@ -224,6 +228,7 @@ var myDecimal = 3.14159
 
 // Change the 0.0 so that product will equal 5.0.
 var product = 2.0 * 2.5;
+
 
 // 15 Basic JavaScript: Divide One Decimal by Another with JavaScript
 // Now let's divide one decimal by another.
