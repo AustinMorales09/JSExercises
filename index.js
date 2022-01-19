@@ -1460,7 +1460,7 @@ function testSize(num) {
  
     // Only change code above this line
   }
-  
+  // comment
   testSize(7);
 
 // 70  Basic JavaScript: Golf Code
