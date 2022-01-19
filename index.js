@@ -216,7 +216,11 @@ myVar--;
 var ourDecimal = 5.7;
 
 // Only change code below this line
-var myDecimal = 3.14159
+
+
+
+
+
 //14 Basic JavaScript: Multiply Two Decimals with JavaScript
 // In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
 
@@ -224,6 +228,7 @@ var myDecimal = 3.14159
 
 // Change the 0.0 so that product will equal 5.0.
 var product = 2.0 * 2.5;
+
 
 // 15 Basic JavaScript: Divide One Decimal by Another with JavaScript
 // Now let's divide one decimal by another.
@@ -625,6 +630,10 @@ ourArray[0] = 15; // equals [15,40,30]
 var myArray = [18,64,99];
 
 // Only change code below this line
+myArray[0] = 45;
+
+
+
 
 // 38 Basic JavaScript: Access Multi-Dimensional Arrays With Indexes
 // One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
@@ -643,7 +652,7 @@ arr[3][0][1]; // equals 11
 // Using bracket notation select an element from myArray such that myData is equal to 8.
 // Setup
 var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
-
+                   0       1         2               3 
 // Only change code below this line
 var myData = myArray[2][1];
 
@@ -791,7 +800,6 @@ function functionWithArgs(apple,banana) {
 // Declare the myGlobal variable below this line
 var myGlobal = 10;
 
-
 function fun1() { 
     oopsGlobal = 5
     // Assign 5 to oopsGlobal Here
@@ -836,7 +844,7 @@ function myLocalScope() {
   myLocalScope();
   
   // Run and check the console
-  // myVar is not defined outside of myLocalScope
+  // myVar is not defined outside of myLocalScope function
   console.log('outside myLocalScope', myVar);
 
 
@@ -924,7 +932,7 @@ addFive();
 
 // Assume we have pre-defined a function sum which adds two numbers together, then:
 
-// ourSum = sum(5, 12);
+ourSum = sum(5, 12);
 
 // will call sum function, which returns a value of 17 and assigns it to ourSum variable.
 
@@ -958,7 +966,6 @@ function nextInLine(arr, item) {
     
     return removed;
     // Only change code above this line
-    
   
   }
   
@@ -1080,8 +1087,8 @@ function testStrict(val) {
 
 // Examples
 
-// 3 == '3'  // returns true because JavaScript performs type conversion from string to number
-// 3 === '3' // returns false because the types are different and type conversion is not performed
+3 == '3'  // returns true because JavaScript performs type conversion from string to number
+3 === '3' // returns false because the types are different and type conversion is not performed
 // Note
 // In JavaScript, you can determine the type of a variable or a value with the typeof operator, as follows:
 
@@ -1103,11 +1110,11 @@ function compareEquality(a, b) {
 
 // Examples
 
-// 1 !=  2     // true
-// 1 != "1"    // false
-// 1 != '1'    // false
-// 1 != true   // false
-// 0 != false  // false
+1 !=  2     // true
+1 != "1"    // false
+1 != 1    // false
+1 != true   // false
+0 != false  // false
 // Add the inequality operator != in the if statement so that the function will return "Not Equal" when val is not equivalent to 99
 
 // Setup
@@ -1126,9 +1133,9 @@ function testNotEqual(val) {
 
 // Examples
 
-// 3 !==  3   // false
-// 3 !== '3'  // true
-// 4 !==  3   // true
+3 !==  3   // false
+3 !== '3'  // true
+4 !==  3   // true
 // Add the strict inequality operator to the if statement so the function will return "Not Equal" when val is not strictly equal to 17
 
 // Setup
@@ -1148,10 +1155,10 @@ function testStrictNotEqual(val) {
 
 // Examples
 
-// 5   >  3   // true
-// 7   > '3'  // true
-// 2   >  3   // false
-// '1' >  9   // false
+5   >  3   // true
+7   > '3'  // true
+2   >  3   // false
+'1' >  9   // false
 // Add the greater than operator to the indicated lines so that the return statements make sense.
 
 function testGreaterThan(val) {
@@ -1175,10 +1182,10 @@ function testGreaterThan(val) {
 
 // Examples
 
-// 6   >=  6   // true
-// 7   >= '3'  // true
-// 2   >=  3   // false
-// '7' >=  9   // false
+6   >=  6   // true
+7   >= '3'  // true
+2   >=  3   // false
+'7' >=  9   // false
 // Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testGreaterOrEqual(val) {
@@ -1194,17 +1201,19 @@ function testGreaterOrEqual(val) {
   }
   
   testGreaterOrEqual(10);
+  testGreaterOrEqual(11);
+  testGreaterOrEqual(21);
 
 //   62 Basic JavaScript: Comparison with the Less Than Operator
 // The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, less than operator converts data types while comparing.
 
 // Examples
 
-// 2   < 5  // true
-// '3' < 7  // true
-// 5   < 5  // false
-// 3   < 2  // false
-// '8' < 4  // false
+2   < 5  // true
+'3' < 7  // true
+5   < 5  // false
+3   < 2  // false
+'8' < 4  // false
 
 // Add the less than operator to the indicated lines so that the return statements make sense.
 function testLessThan(val) {
@@ -1219,18 +1228,20 @@ function testLessThan(val) {
     return "55 or Over";
   }
   
-  testLessThan(10);
+  testLessThan(54);
+  testLessThan(56);
+  testLessThan(24);
 
 //   63 Basic JavaScript: Comparison with the Less Than Or Equal To Operator
 // The less than or equal to operator (<=) compares the values of two numbers. If the number to the left is less than or equal to the number to the right, it returns true. If the number on the left is greater than the number on the right, it returns false. Like the equality operator, less than or equal to converts data types.
 
 // Examples
 
-// 4   <= 5  // true
-// '7' <= 7  // true
-// 5   <= 5  // true
-// 3   <= 2  // false
-// '8' <= 4  // false
+4   <= 5  // true
+'7' <= 7  // true
+5   <= 5  // true
+3   <= 2  // false
+'8' <= 4  // false
 // Add the less than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testLessOrEqual(val) {
@@ -1288,13 +1299,13 @@ function testLogicalAnd(val) {
 
 // The pattern below should look familiar from prior waypoints:
 
-// if (num > 10) {
-//   return "No";
-// }
-// if (num < 5) {
-//   return "No";
-// }
-// return "Yes";
+if (num > 10) {
+  return "No";
+}
+if (num < 5) {
+  return "No";
+}
+return "Yes";
 // will return "Yes" only if num is between 5 and 10 (5 and 10 included). The same logic can be written as:
 
 if (num > 10 || num < 5) {
@@ -1332,13 +1343,12 @@ function testElse(val) {
       result = "Bigger than 5";
       return result;
     } else {
-        result = "5 or smaller"
-        return result;
+      result = "5 or Smaller";
+      return result;
     }
-
   
     // Only change code above this line
-  
+
   }
   
   testElse(4);
@@ -1398,15 +1408,15 @@ function bar(x) {
 }
 // While these two functions look nearly identical if we pass a number to both we get different outputs.
 
-// foo(0) // "Less than one"
-// bar(0) // "Less than two"
+foo(0) // "Less than one"
+bar(0) // "Less than two"
 // Change the order of logic in the function so that it will return the correct statements in all cases.
 function orderMyLogic(val) {
-    if (val < 10) {
-      return "Less than 10";
-    } else if (val < 5) {
+    if (val < 5) {
       return "Less than 5";
-    } else {
+    } else if (val < 10) {
+      return "Less than 10";
+    }  else {
       return "Greater than or equal to 10";
     }
   }
@@ -1735,9 +1745,6 @@ function cc(card) {
   // Only change code below this line
 
 
-  return "Change Me";
-  // Only change code above this line
-}
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
  
