@@ -568,6 +568,9 @@ var myAdverb = "quickly";
 // Only change code below this line
 var wordBlanks = "The " + myAdjective + ' ' + myNoun + ' ' + myVerb + ' ' + myAdverb; // Change this line
 // Only change code above this line
+
+
+
 // 34 Basic JavaScript: Store Multiple Values in one Variable using JavaScript Arrays
 // With JavaScript array variables, we can store several pieces of data in one place.
 
