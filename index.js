@@ -10,7 +10,10 @@ As you write code, you should regularly add comments to clarify the function of 
 
 // Try creating one of each type of comment.
 
+// single line comment
 
+/* multi-line 
+comment */
 
 
 
@@ -25,32 +28,32 @@ As you write code, you should regularly add comments to clarify the function of 
 
 // We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:
 
-// var ourName;
+var ourName;
 // creates a variable called ourName. In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number.
 
 // Use the var keyword to create a variable called myName.
 
-
+var myName;
 
 
 // 3 Basic JavaScript: Storing Values with the Assignment Operator
 // In JavaScript, you can store a value in a variable with the assignment operator (=).
 
-// myVariable = 5;
+myVariable = 5;
 
 // This assigns the Number value 5 to myVariable.
 
 // If there are any calculations to the right of the = operator, those are performed before the value is assigned to the variable on the left of the operator.
 
-// var myVar;
-// myVar = 5;
+var myVar;
+myVar = 5;
 // First, this code creates a variable named myVar. Then, the code assigns 5 to myVar. Now, if myVar appears again in the code, the program will treat it as if it is 5.
 
 // Assign the value 7 to variable a.
 
 // Setup
 var a;
-
+a = 7;
 // Only change code below this line
 
 
@@ -61,13 +64,13 @@ var a;
 
 // It is common to initialize a variable to an initial value in the same line as it is declared.
 
-// var myVar = 0;
+var myVar = 0;
 
 // Creates a new variable called myVar and assigns it an initial value of 0.
 
 // Define a variable a with var and initialize it to a value of 9.
 
-
+var a = 9;
 
 
 
@@ -78,9 +81,9 @@ var a;
 
 
 // Only change code below this line
-var a;
-var b;
-var c;
+var a = 5;
+var b = 10;
+var c = "I am a";
 // Only change code above this line
 
 a = a + 1;
@@ -97,21 +100,21 @@ c = c + " String!";
 
 // Examples:
 
-// var someVariable;
-// var anotherVariableName;
-// var thisVariableNameIsSoLong;
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;
 // Modify the existing declarations and assignments so their names use camelCase.
 // Do not create any new variables.
 
 // Variable declarations
-var StUdLyCapVaR;
+var studlyCapVar;
 var properCamelCase;
-var TitleCaseOver;
+var titleCaseOver;
 
 // Variable assignments
-STUDLYCAPVAR = 10;
-PRoperCAmelCAse = "A String";
-tITLEcASEoVER = 9000;
+studlyCapVar = 10;
+properCamelCase = "A String";
+titleCaseOver = 9000;
 
 // 7 Basic JavaScript: Add Two Numbers with JavaScript
 // Number is a data type in JavaScript which represents numeric data.
@@ -122,9 +125,9 @@ tITLEcASEoVER = 9000;
 
 // Example:
 
-// myVar = 5 + 10; // assigned 15
+myVar = 5 + 10; // assigned 15
 // Change the 0 so that sum will equal 20.
-var sum = 10 + 0;
+var sum = 10 + 10;
 
 // 8 Basic JavaScript: Subtract One Number from Another with JavaScript
 // We can also subtract one number from another.
@@ -135,7 +138,7 @@ var sum = 10 + 0;
 
 // myVar = 12 - 6; // assigned 6
 // Change the 0 so the difference is 12.
-var difference = 45 - 0;
+var difference = 45 -33;
 
 // 9 Basic JavaScript: Multiply Two Numbers with JavaScript
 // We can also multiply one number by another.
@@ -146,7 +149,7 @@ var difference = 45 - 0;
 
 // myVar = 13 * 13; // assigned 169
 // Change the 0 so that product will equal 80.
-var product = 8 * 0;
+var product = 8 * 10;
 
 // 10 Basic JavaScript: Divide One Number by Another with JavaScript
 // We can also divide one number by another.
@@ -157,4 +160,4 @@ var product = 8 * 0;
 
 // myVar = 16 / 2; // assigned 8
 // Change the 0 so that the quotient is equal to 2.
-var quotient = 66 / 0;
+var quotient = 66 / 33;
