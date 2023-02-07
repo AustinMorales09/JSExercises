@@ -208,7 +208,6 @@ myVar = myVar - 1;
 var ourDecimal = 5.7;
 
 // Only change code below this line
-
 //14 Basic JavaScript: Multiply Two Decimals with JavaScript
 // In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
 
@@ -338,7 +337,6 @@ c = c / 11;
 // "your name" is called a string literal. It is a string because it is a series of zero or more characters enclosed in single or double quotes.
 
 // Create two new string variables: myFirstName and myLastName and assign them the values of your first and last name, respectively.
-
 
 
 // 22 Basic JavaScript: Escaping Literal Quotes in Strings
