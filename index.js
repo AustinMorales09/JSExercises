@@ -28,7 +28,7 @@ Multi-Line
 
 // We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:
 
-// var ourName;
+var ourName;
 // creates a variable called ourName. In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number.
 
 // Use the var keyword to create a variable called myName.
@@ -36,25 +36,24 @@ Multi-Line
 var myName;
 
 
-
 // 3 Basic JavaScript: Storing Values with the Assignment Operator
 // In JavaScript, you can store a value in a variable with the assignment operator (=).
 
-// myVariable = 5;
+myVariable = 5;
 
 // This assigns the Number value 5 to myVariable.
 
 // If there are any calculations to the right of the = operator, those are performed before the value is assigned to the variable on the left of the operator.
 
-// var myVar;
-// myVar = 5;
+var myVar;
+myVar = 5;
 // First, this code creates a variable named myVar. Then, the code assigns 5 to myVar. Now, if myVar appears again in the code, the program will treat it as if it is 5.
 
 // Assign the value 7 to variable a.
 
 // Setup
 var a;
-
+a = 7;
 // Only change code below this line
 a = 7;
 
@@ -65,7 +64,7 @@ a = 7;
 
 // It is common to initialize a variable to an initial value in the same line as it is declared.
 
-// var myVar = 0;
+var myVar = 0;
 
 // Creates a new variable called myVar and assigns it an initial value of 0.
 
@@ -101,9 +100,9 @@ c = c + " String!";
 
 // Examples:
 
-// var someVariable;
-// var anotherVariableName;
-// var thisVariableNameIsSoLong;
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;
 // Modify the existing declarations and assignments so their names use camelCase.
 // Do not create any new variables.
 
@@ -126,7 +125,7 @@ titleCaseOver = 9001;
 
 // Example:
 
-// myVar = 5 + 10; // assigned 15
+myVar = 5 + 10; // assigned 15
 // Change the 0 so that sum will equal 20.
 var sum = 10 + 10;
 
