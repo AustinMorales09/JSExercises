@@ -30,7 +30,7 @@ More text
 
 // We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:
 
-// var ourName;
+var ourName;
 // creates a variable called ourName. In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number.
 
 // Use the var keyword to create a variable called myName.
@@ -38,25 +38,24 @@ More text
 var myNameNewCaptial;
 
 
-
 // 3 Basic JavaScript: Storing Values with the Assignment Operator
 // In JavaScript, you can store a value in a variable with the assignment operator (=).
 
-// myVariable = 5;
+myVariable = 5;
 
 // This assigns the Number value 5 to myVariable.
 
 // If there are any calculations to the right of the = operator, those are performed before the value is assigned to the variable on the left of the operator.
 
-// var myVar;
-// myVar = 5;
+var myVar;
+myVar = 5;
 // First, this code creates a variable named myVar. Then, the code assigns 5 to myVar. Now, if myVar appears again in the code, the program will treat it as if it is 5.
 
 // Assign the value 7 to variable a.
 
 // Setup
 var a;
-
+a = 7;
 // Only change code below this line
 a = 7;
 
@@ -67,7 +66,7 @@ a = 7;
 
 // It is common to initialize a variable to an initial value in the same line as it is declared.
 
-// var myVar = 0;
+var myVar = 0;
 
 // Creates a new variable called myVar and assigns it an initial value of 0.
 
@@ -103,9 +102,9 @@ c = c + " String!";
 
 // Examples:
 
-// var someVariable;
-// var anotherVariableName;
-// var thisVariableNameIsSoLong;
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;
 // Modify the existing declarations and assignments so their names use camelCase.
 // Do not create any new variables.
 
@@ -128,7 +127,7 @@ titleCaseOver = 9001;
 
 // Example:
 
-// myVar = 5 + 10; // assigned 15
+myVar = 5 + 10; // assigned 15
 // Change the 0 so that sum will equal 20.
 var sum = 10 + 10;
 
@@ -256,7 +255,7 @@ var quotient = 4.4 / 2.0; // Change this line
 
 var remainder = 11 % 3;
 
-// 17 Basic JavaScript: Compound Assignment With Augmented Addition
+//17 Basic JavaScript: Compound Assignment With Augmented Addition
 // In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
 
 myVar = myVar + 5;
@@ -285,11 +284,11 @@ c += 7;
 // 18 Basic JavaScript: Compound Assignment With Augmented Subtraction
 // Like the += operator, -= subtracts a number from a variable.
 
-// myVar = myVar - 5;
+myVar = myVar - 5;
 
 // will subtract 5 from myVar. This can be rewritten as:
 
-// myVar -= 5;
+myVar -= 5;
 
 // Convert the assignments for a, b, and c to use the -= operator.
 
@@ -305,11 +304,11 @@ c -= 1;
 // 19 Basic JavaScript: Compound Assignment With Augmented Multiplication
 // The *= operator multiplies a variable by a number.
 
-// myVar = myVar * 5;
+myVar = myVar * 5;
 
 // will multiply myVar by 5. This can be rewritten as:
 
-// myVar *= 5;
+myVar *= 5;
 
 // Convert the assignments for a, b, and c to use the *= operator.
 
@@ -325,11 +324,11 @@ c *= 10;
 // 20 Basic JavaScript: Compound Assignment With Augmented Division
 // The /= operator divides a variable by another number.
 
-// myVar = myVar / 5;
+myVar = myVar / 5;
 
 // Will divide myVar by 5. This can be rewritten as:
 
-// myVar /= 5;
+myVar /= 5;
 
 // Convert the assignments for a, b, and c to use the /= operator.
 var a = 48;
@@ -375,7 +374,7 @@ var myStr = "I am a 'double quoted' string inside 'double quotes'."; // Change t
 
 // Example
 
-// 'My name is Alan,' + ' I concatenate.'
+'My name is Alan,' + ' I concatenate.'
 // Note
 // Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
 
@@ -408,8 +407,8 @@ myStr += "This is the second sentence.";
 
 // Example:
 
-// var ourName = "Zorkbork";
-// var ourStr = "Hello, our name is " + ourName + ", how are you?";
+var ourName = "Zorkbork";
+var ourStr = "Hello, our name is " + ourName + " how are you?";
 // // ourStr is now "Hello, our name is Zorkbork, how are you?"
 // Set myName to a string equal to your name and build myStr with myName between the strings "My name is " and " and I am well!"
 var myName ="Austin"
@@ -421,17 +420,17 @@ var myStr = "My name is " + myName + " and I am well!"
 
 // Example:
 
-// var anAdjective = "awesome!";
-// var ourStr = "Austin is ";
-// ourStr += anAdjective;
-// ourStr is now "Austin is awesome!"
+var anAdjective = "awesome!";
+var ourStr = "Austin is ";
+ourStr += anAdjective;
+ourStr is now "Austin is awesome!"
 // Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator.
 
 // Change code below this line
 
-var someAdjective;
+var someAdjective = "cOoL";
 var myStr = "Learning to code is ";
-
+myStr += someAdjective;
 // 27 Basic JavaScript: Find the Length of a String
 // You can find the length of a String value by writing .length after the string variable or string literal.
 
@@ -458,8 +457,8 @@ lastNameLength = lastName.length;
 
 // Example:
 
-// var firstName = "Charles";
-// var firstLetter = firstName[0]; // firstLetter is "C"
+var firstName = "Charles";
+var firstLetter = firstName[0]; // firstLetter is "C"
 // Use bracket notation to find the first character in the lastName variable and assign it to firstLetterOfLastName.
 
 // Hint: Try looking at the example above if you get stuck.
@@ -499,8 +498,8 @@ myStr = "Hello World"; // Change this line
 
 // Example:
 
-// var firstName = "Ada";
-// var secondLetterOfFirstName = firstName[1]; // secondLetterOfFirstName is "d"
+var firstName = "Ada";
+var secondLetterOfFirstName = firstName[1]; // secondLetterOfFirstName is "d"
 // Let's try to set thirdLetterOfLastName to equal the third letter of the lastName variable using bracket notation.
 // Setup
 var lastName = "Lovelace";
@@ -515,8 +514,8 @@ var thirdLetterOfLastName = lastName[2]; // Change this line
 
 // Example:
 
-// var firstName = "Charles";
-// var lastLetter = firstName[firstName.length - 1]; // lastLetter is "s"
+var firstName = "Charles";
+var lastLetter = firstName[firstName.length - 1]; // lastLetter is "s"
 // Use bracket notation to find the last character in the lastName variable.
 
 // Hint: Try looking at the example above if you get stuck.
@@ -533,8 +532,8 @@ var lastLetterOfLastName = lastName[lastName.length - 6]; // Change this line
 
 // Example:
 
-// var firstName = "Charles";
-// var thirdToLastLetter = firstName[firstName.length - 3]; // thirdToLastLetter is "l"
+var firstName = "Charles";
+var thirdToLastLetter = firstName[firstName.length - 3]; // thirdToLastLetter is "l"
 // Use bracket notation to find the second-to-last character in the lastName string.
 
 // Hint: Try looking at the example above if you get stuck.
@@ -545,13 +544,11 @@ var lastName = "Lovelace";
 var secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change this line
 
 // 33 Basic JavaScript: Word Blanks
-// var wordBlanks = "the" + ' '+ myNoun +" "+ myAdjective+ " " + myVerb +" "+ myAdverb; // Change this line
-
 // In a "Mad Libs" game, you are provided sentences with some missing words, like nouns, verbs, adjectives and adverbs. You then fill in the missing pieces with words of your choice in a way that the completed sentence makes sense.
 
 // Consider this sentence - "It was really ____, and we ____ ourselves ____". This sentence has three missing pieces- an adjective, a verb and an adverb, and we can add words of our choice to complete it. We can then assign the completed sentence to a variable as follows:
 
-// var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
+var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
 // In this challenge, we provide you with a noun, a verb, an adjective and an adverb. You need to form a complete sentence using words of your choice, along with the words we provide.
 
 // You will need to use the string concatenation operator + to build a new string, using the provided variables: myNoun, myAdjective, myVerb, and myAdverb. You will then assign the formed string to the wordBlanks variable. You should not change the words assigned to the variables.
