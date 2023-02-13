@@ -570,22 +570,22 @@ var wordBlanks = "The " + myAdjective + ' ' + myNoun + ' ' + myVerb + ' ' + myAd
 
 // You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
 
-// var sandwich = ["peanut butter", "jelly", "bread"].
+var sandwich = ["peanut butter", "jelly", "bread"]
 
 // Modify the new array myArray so that it contains both a string and a number (in that order).
 // Only change code below this line
-var myArray = [];
+var myArray = ["string", 9];
 
 // 35 Basic JavaScript: Nest one Array within Another Array
 // You can also nest arrays within other arrays, like below:
 
-// [["Bulls", 23], ["White Sox", 45]]
+var test = [["Bulls", 23], ["White Sox", 45]]
 // This is also called a multi-dimensional array.
 
 // Create a nested array called myArray.
 
 // Only change code below this line
-var myArray = [];
+var myArray = [[10, 9], [20, "string"]];
 
 // 36 Basic JavaScript: Access Array Data with Indexes
 // We can access the data inside arrays using indexes.
@@ -595,10 +595,10 @@ var myArray = [];
 
 // Example
 
-// var array = [50,60,70];
-// array[0]; // equals 50
-// var data = array[1]; 
-// equals 60
+var array = [50,60,70];
+array[0]; // equals 50
+var data = array[1]; 
+equals 60
 
 // Create a variable called myData and set it to equal the first value of myArray using bracket notation.
 
@@ -606,41 +606,41 @@ var myArray = [];
 var myArray = [50,60,70];
 
 // Only change code below this line
-
+var myData = myArray[0];
 // 37 Basic JavaScript: Modify Array Data With Indexes
 // Unlike strings, the entries of arrays are mutable and can be changed freely.
 
 // Example
 
-// var ourArray = [50,40,30];
-// ourArray[0] = 15; // equals [15,40,30]
+var ourArray = [50,40,30];
+ourArray[0] = 15; // equals [15,40,30]
 
 // Modify the data stored at index 0 of myArray to a value of 45.
 // Setup
 var myArray = [18,64,99];
 
 // Only change code below this line
-
+myArray[0] = 45;
 // 38 Basic JavaScript: Access Multi-Dimensional Arrays With Indexes
 // One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
 
 // Example
 
-// var arr = [
-//   [1,2,3],
-//   [4,5,6],
-//   [7,8,9],
-//   [[10,11,12], 13, 14]
-// ];
-// arr[3]; // equals [[10,11,12], 13, 14]
-// arr[3][0]; // equals [10,11,12]
-// arr[3][0][1]; // equals 11
+var arr = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  [[10,11,12], 13, 14]
+];
+arr[3]; // equals [[10,11,12], 13, 14]
+arr[3][0]; // equals [10,11,12]
+arr[3][0][1]; // equals 11
 // Using bracket notation select an element from myArray such that myData is equal to 8.
 // Setup
 var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
 
 // Only change code below this line
-var myData = myArray[0][0];
+var myData = myArray[2][1];
 
 // 39 Basic JavaScript: Manipulate Arrays With push()
 // An easy way to append data to the end of an array is via the push() function.
@@ -648,20 +648,20 @@ var myData = myArray[0][0];
 // .push() takes one or more parameters and "pushes" them onto the end of the array.
 // Examples:
 
-// var arr1 = [1,2,3];
-// arr1.push(4);
-// arr1 is now [1,2,3,4]
+var arr1 = [1,2,3];
+arr1.push(4);
+arr1 is now [1,2,3,4]
 
-// var arr2 = ["Stimpson", "J", "cat"];
-// arr2.push(["happy", "joy"]);
-// arr2 now equals ["Stimpson", "J", "cat", ["happy", "joy"]]
+var arr2 = ["Stimpson", "J", "cat"];
+arr2.push(["happy", "joy"]);
+arr2 now equals ["Stimpson", "J", "cat", ["happy", "joy"]]
 
 // Push ["dog", 3] onto the end of the myArray variable.
 // Setup
 var myArray = [["John", 23], ["cat", 2]];
 
 // Only change code below this line
-
+myArray.push(['dog', 3])
 // 40 Basic JavaScript: Manipulate Arrays With pop()
 // Another way to change the data in an array is with the .pop() function.
 
@@ -669,16 +669,16 @@ var myArray = [["John", 23], ["cat", 2]];
 
 // Any type of entry can be "popped" off of an array - numbers, strings, even nested arrays.
 
-// var threeArr = [1, 4, 6];
-// var oneDown = threeArr.pop();
-// console.log(oneDown); // Returns 6
-// console.log(threeArr); // Returns [1, 4]
+var threeArr = [1, 4, 6];
+var oneDown = threeArr.pop();
+console.log(oneDown); // Returns 6
+console.log(threeArr); // Returns [1, 4]
 // Use the .pop() function to remove the last item from myArray, assigning the "popped off" value to removedFromMyArray.
 // Setup
 var myArray = [["John", 23], ["cat", 2]];
 
 // Only change code below this line
-var removedFromMyArray;
+var removedFromMyArray = myArray.pop();
 
 // 41 Basic JavaScript: Manipulate Arrays With shift()
 // pop() always removes the last element of an array. What if you want to remove the first?
@@ -687,8 +687,8 @@ var removedFromMyArray;
 
 // Example:
 
-// var ourArray = ["Stimpson", "J", ["cat"]];
-// var removedFromOurArray = ourArray.shift();
+var ourArray = ["Stimpson", "J", ["cat"]];
+var removedFromOurArray = ourArray.shift();
 // // removedFromOurArray now equals "Stimpson" and ourArray now equals ["J", ["cat"]].
 
 // Use the .shift() function to remove the first item from myArray, assigning the "shifted off" value to removedFromMyArray.
@@ -697,7 +697,7 @@ var removedFromMyArray;
 var myArray = [["John", 23], ["dog", 3]];
 
 // Only change code below this line
-var removedFromMyArray;
+var removedFromMyArray = myArray.shift();
  
 // 42 Basic JavaScript: Manipulate Arrays With unshift()
 // Not only can you shift elements off of the beginning of an array, you can also unshift elements to the beginning of an array i.e. add elements in front of the array.
@@ -706,10 +706,10 @@ var removedFromMyArray;
 
 // Example:
 
-// var ourArray = ["Stimpson", "J", "cat"];
-// ourArray.shift(); // ourArray now equals ["J", "cat"]
-// ourArray.unshift("Happy");
-// // ourArray now equals ["Happy", "J", "cat"]
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift(); // ourArray now equals ["J", "cat"]
+ourArray.unshift("Happy");
+// ourArray now equals ["Happy", "J", "cat"]
 
 // Add ["Paul",35] to the beginning of the myArray variable using unshift().
 // Setup
@@ -717,7 +717,7 @@ var myArray = [["John", 23], ["dog", 3]];
 myArray.shift();
 
 // Only change code below this line
-
+myArray.unshift(['Paul', 35]);
 
 
 // 43 Basic JavaScript: Shopping List
@@ -729,37 +729,42 @@ myArray.shift();
 
 // There should be at least 5 sub-arrays in the list.
 
-var myList = [];
+var myList = [["Bread", 24], ['Eggs', 10], ['Milk', 2], ['Gatorade', 6], ['cereal', 3]];
 
 // 44 Basic JavaScript: Write Reusable JavaScript with Functions
 // In JavaScript, we can divide up our code into reusable parts called functions.
 
 // Here's an example of a function:
 
-// function functionName() {
-//   console.log("Hello World");
-// }
+function functionName() {
+  console.log("Hello World");
+}
 // You can call or invoke this function by using its name followed by parentheses, like this: functionName(); Each time the function is called it will print out the message "Hello World" on the dev console. All of the code between the curly braces will be executed every time the function is called.
 
 // Create a function called reusableFunction which prints "Hi World" to the dev console.
 // Call the function.
-
-
+function reusableFunction(param1, param2) {
+    console.log('Hi World');
+}
+reusableFunction(2, 10);
 
 // 45 Basic JavaScript: Passing Values to Functions with Arguments
 
 // Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
 // Here is a function with two parameters, param1 and param2:
 
-// function testFun(param1, param2) {
-//   console.log(param1, param2);
-// }
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+testFun("Hello", "World");
 // Then we can call testFun: testFun("Hello", "World"); We have passed two arguments, "Hello" and "World". Inside the function, param1 will equal "Hello" and param2 will equal "World". Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.
 
 // Create a function called functionWithArgs that accepts two arguments and outputs their sum to the dev console.
 // Call the function with two numbers as arguments.
-
-
+function functionWithArgs(x, y) {
+    console.log(x + y)
+}
+functionWithArgs(10, 20);
 
 // 46 Basic JavaScript: Global Scope and Functions
 // In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
@@ -771,11 +776,11 @@ var myList = [];
 // Inside function fun1, assign 5 to oopsGlobal without using the var keyword.
 
 // Declare the myGlobal variable below this line
-
+var myGlobal = 10;
 
 function fun1() {
     // Assign 5 to oopsGlobal Here
-  
+    oopsGlobal = 5;
   }
   
   // Only change code above this line
@@ -797,18 +802,19 @@ function fun1() {
 
 // Here is a function myTest with a local variable called loc.
 
-// function myTest() {
-//   var loc = "foo";
-//   console.log(loc);
-// }
-// myTest(); // logs "foo"
-// console.log(loc); // loc is not defined
+function myTest() {
+  var loc = "foo";
+  console.log(loc);
+}
+myTest(); // logs "foo"
+console.log(loc); // loc is not defined
 // loc is not defined outside of the function.
 
 // The editor has two console.logs to help you see what is happening. Check the console as you code to see how it changes. Declare a local variable myVar inside myLocalScope and run the tests.
 function myLocalScope() {
 
     // Only change code below this line
+    var myVar = 5;
   
     console.log('inside myLocalScope', myVar);
   }
@@ -823,12 +829,14 @@ function myLocalScope() {
 // It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 
 // In this example:
+// global variable
+var someVar = "Hat";
 
-// var someVar = "Hat";
-// function myFun() {
-//   var someVar = "Head";
-//   return someVar;
-// }
+function myFun() {
+    // local variable
+  var someVar = "Head";
+  return someVar;
+}
 // The function myFun will return "Head" because the local version of the variable is present.
 
 // Add a local variable to myOutfit function to override the value of outerWear with "sweater".
@@ -837,7 +845,7 @@ var outerWear = "T-Shirt";
 
 function myOutfit() {
   // Only change code below this line
-
+    var outerWear = 'Sweater';
 
 
   // Only change code above this line
@@ -851,26 +859,28 @@ myOutfit();
 
 // Example
 
-// function plusThree(num) {
-//   return num + 3;
-// }
-// var answer = plusThree(5); // 8
+function plusThree(num) {
+  return num + 3;
+}
+var answer = plusThree(5); // 8
 // plusThree takes an argument for num and returns a value equal to num + 3.
 
 // Create a function timesFive that accepts one argument, multiplies it by 5, and returns the new value. See the last line in the editor for an example of how you can test your timesFive function.
 
-
-
+function timesFive(num){
+    return num * 5;
+}
+timesFive(5)
 // 50 Basic JavaScript: Understanding Undefined Value returned from a Function
 // A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
 
 // Example
 
-// var sum = 0;
-// function addSum(num) {
-//   sum = sum + num;
-// }
-// addSum(3); // sum will be modified but returned value is undefined
+var sum = 0;
+function addSum(num) {
+  sum = sum + num;
+}
+addSum(3); // sum will be modified but returned value is undefined
 // addSum is a function without a return statement. The function will change the global sum variable but the returned value of the function is undefined.
 
 // Create a function addFive without any arguments. This function adds 5 to the sum variable, but its returned value is undefined.
@@ -883,7 +893,9 @@ function addThree() {
 }
 
 // Only change code below this line
-
+function addFive(){
+    sum = sum + 5
+}
 
 // Only change code above this line
 
@@ -896,7 +908,7 @@ addFive();
 
 // Assume we have pre-defined a function sum which adds two numbers together, then:
 
-// ourSum = sum(5, 12);
+ourSum = sum(5, 12);
 
 // will call sum function, which returns a value of 17 and assigns it to ourSum variable.
 
@@ -910,7 +922,7 @@ function processArg(num) {
 }
 
 // Only change code below this line
-
+var processed = processArg(7)
 
 // 52 Basic JavaScript: Stand in Line
 // In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
@@ -923,8 +935,11 @@ function processArg(num) {
 
 function nextInLine(arr, item) {
     // Only change code below this line
+    arr.push(item);
+
+    var removed = arr.shift();
     
-    return item;
+    return removed;
     // Only change code above this line
     
   
@@ -949,7 +964,7 @@ function welcomeToBooleans() {
 
     // Only change code below this line
   
-    return false; // Change this line
+    return true; // Change this line
   
     // Only change code above this line
   }
@@ -966,20 +981,23 @@ function welcomeToBooleans() {
 // }
 // Example
 
-// function test (myCondition) {
-//   if (myCondition) {
-//      return "It was true";
-//   }
-//   return "It was false";
-// }
-// test(true);  // returns "It was true"
-// test(false); // returns "It was false"
+function test (myCondition) {
+  if (myCondition) {
+     return "It was true";
+  }
+  return "It was false";
+}
+test(true);  // returns "It was true"
+test(false); // returns "It was false"
 // When test is called with a value of true, the if statement evaluates myCondition to see if it is true or not. Since it is true, the function returns "It was true". When we call test with a value of false, myCondition is not true and the statement in the curly braces is not executed and the function returns "It was false".
 
 // Create an if statement inside the function to return "Yes, that was true" if the parameter wasThatTrue is true and return "No, that was false" otherwise.
 function trueOrFalse(wasThatTrue) {
     // Only change code below this line
-  
+    if(wasThatTrue){
+      return "Yes, that was true";
+    }
+    return "No, that was false";
   
   
     // Only change code above this line
@@ -992,23 +1010,23 @@ function trueOrFalse(wasThatTrue) {
 
 // The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value on the right of the operator to a variable on the left.
 
-// function equalityTest(myVal) {
-//   if (myVal == 10) {
-//      return "Equal";
-//   }
-//   return "Not Equal";
-// }
+function equalityTest(myVal) {
+  if (myVal == 10) {
+     return "Equal";
+  }
+  return "Not Equal";
+}
 // If myVal is equal to 10, the equality operator returns true, so the code in the curly braces will execute, and the function will return "Equal". Otherwise, the function will return "Not Equal". In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as "Type Coercion". Once it does, however, it can compare terms as follows:
 
-// 1   ==  1   // true
-// 1   ==  2   // false
-// 1   == '1'  // true
-// "3" ==  3   // true
+1   ==  1   // true
+1   ==  2   // false
+1   == '1'  // true
+"3" ==  3   // true
 // Add the equality operator to the indicated line so that the function will return "Equal" when val is equivalent to 12.
 
 // Setup
 function testEqual(val) {
-    if (val) { // Change this line
+    if (val == 12) { // Change this line
       return "Equal";
     }
     return "Not Equal";
@@ -1025,14 +1043,14 @@ function testEqual(val) {
 
 // Examples
 
-// 3 ===  3   // true
-// 3 === '3'  // false
+3 ===  3   // true
+3 === '3'  // false
 // In the second example, 3 is a Number type and '3' is a String type.
 
 // Use the strict equality operator in the if statement so the function will return "Equal" when val is strictly equal to 7
 // Setup
 function testStrict(val) {
-    if (val) { // Change this line
+    if (val === 7) { // Change this line
       return "Equal";
     }
     return "Not Equal";
@@ -1057,7 +1075,7 @@ function testStrict(val) {
 // The compareEquality function in the editor compares two values using the equality operator. Modify the function so that it returns "Equal" only when the values are strictly equal.
 // Setup
 function compareEquality(a, b) {
-    if (a == b) { // Change this line
+    if (a === b) { // Change this line
       return "Equal";
     }
     return "Not Equal";
@@ -1071,16 +1089,16 @@ function compareEquality(a, b) {
 
 // Examples
 
-// 1 !=  2     // true
-// 1 != "1"    // false
-// 1 != '1'    // false
-// 1 != true   // false
-// 0 != false  // false
+1 !=  2     // true
+1 != "1"    // false
+1 != '1'    // false
+1 != true   // false
+0 != false  // false
 // Add the inequality operator != in the if statement so that the function will return "Not Equal" when val is not equivalent to 99
 
 // Setup
 function testNotEqual(val) {
-    if (val) { // Change this line
+    if (val != 99) { // Change this line
       return "Not Equal";
     }
     return "Equal";
@@ -1094,14 +1112,14 @@ function testNotEqual(val) {
 
 // Examples
 
-// 3 !==  3   // false
-// 3 !== '3'  // true
-// 4 !==  3   // true
+3 !==  3   // false
+3 !== '3'  // true
+4 !==  3   // true
 // Add the strict inequality operator to the if statement so the function will return "Not Equal" when val is not strictly equal to 17
 
 // Setup
 function testStrictNotEqual(val) {
-    if (val) { // Change this line
+    if (val !== 17) { // Change this line
       return "Not Equal";
     }
     return "Equal";
@@ -1116,18 +1134,18 @@ function testStrictNotEqual(val) {
 
 // Examples
 
-// 5   >  3   // true
-// 7   > '3'  // true
-// 2   >  3   // false
-// '1' >  9   // false
+5   >  3   // true
+7   > '3'  // true
+2   >  3   // false
+'1' >  9   // false
 // Add the greater than operator to the indicated lines so that the return statements make sense.
 
 function testGreaterThan(val) {
-    if (val) {  // Change this line
+    if (val > 100) {  // Change this line
       return "Over 100";
     }
   
-    if (val) {  // Change this line
+    if (val > 10) {  // Change this line
       return "Over 10";
     }
   
@@ -1143,18 +1161,18 @@ function testGreaterThan(val) {
 
 // Examples
 
-// 6   >=  6   // true
-// 7   >= '3'  // true
-// 2   >=  3   // false
-// '7' >=  9   // false
+6   >=  6   // true
+7   >= '3'  // true
+2   >=  3   // false
+'7' >=  9   // false
 // Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testGreaterOrEqual(val) {
-    if (val) {  // Change this line
+    if (val >= 20) {  // Change this line
       return "20 or Over";
     }
   
-    if (val) {  // Change this line
+    if (val >= 10) {  // Change this line
       return "10 or Over";
     }
   
@@ -1168,19 +1186,19 @@ function testGreaterOrEqual(val) {
 
 // Examples
 
-// 2   < 5  // true
-// '3' < 7  // true
-// 5   < 5  // false
-// 3   < 2  // false
-// '8' < 4  // false
+2   < 5  // true
+'3' < 7  // true
+5   < 5  // false
+3   < 2  // false
+'8' < 4  // false
 
 // Add the less than operator to the indicated lines so that the return statements make sense.
 function testLessThan(val) {
-    if (val) {  // Change this line
+    if (val < 25) {  // Change this line
       return "Under 25";
     }
   
-    if (val) {  // Change this line
+    if (val < 55) {  // Change this line
       return "Under 55";
     }
   
@@ -1194,19 +1212,19 @@ function testLessThan(val) {
 
 // Examples
 
-// 4   <= 5  // true
-// '7' <= 7  // true
-// 5   <= 5  // true
-// 3   <= 2  // false
-// '8' <= 4  // false
+4   <= 5  // true
+'7' <= 7  // true
+5   <= 5  // true
+3   <= 2  // false
+'8' <= 4  // false
 // Add the less than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testLessOrEqual(val) {
-    if (val) {  // Change this line
+    if (val <= 12) {  // Change this line
       return "Smaller Than or Equal to 12";
     }
   
-    if (val) {  // Change this line
+    if (val <= 24) {  // Change this line
       return "Smaller Than or Equal to 24";
     }
   
@@ -1220,28 +1238,26 @@ function testLessOrEqual(val) {
 
 // The same effect could be achieved by nesting an if statement inside another if:
 
-// if (num > 5) {
-//   if (num < 10) {
-//     return "Yes";
-//   }
-// }
-// return "No";
+if (num > 5) {
+  if (num < 10) {
+    return "Yes";
+  }
+}
+return "No";
 // will only return "Yes" if num is greater than 5 and less than 10. The same logic can be written as:
 
-// if (num > 5 && num < 10) {
-//   return "Yes";
-// }
-// return "No";
+if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No";
 // Replace the two if statements with one statement, using the && operator, which will return "Yes" if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return "No".
 
 
 function testLogicalAnd(val) {
     // Only change code below this line
   
-    if (val) {
-      if (val) {
+    if (val <= 50 && val >= 25 ) {
         return "Yes";
-      }
     }
   
     // Only change code above this line
@@ -1257,31 +1273,28 @@ function testLogicalAnd(val) {
 
 // The pattern below should look familiar from prior waypoints:
 
-// if (num > 10) {
-//   return "No";
-// }
-// if (num < 5) {
-//   return "No";
-// }
-// return "Yes";
+if (num > 10) {
+  return "No";
+}
+if (num < 5) {
+  return "No";
+}
+return "Yes";
 // will return "Yes" only if num is between 5 and 10 (5 and 10 included). The same logic can be written as:
 
-// if (num > 10 || num < 5) {
-//   return "No";
-// }
-// return "Yes";
+if (num > 10 || num < 5) {
+  return "No";
+}
+return "Yes";
 // Combine the two if statements into one statement which returns "Outside" if val is not between 10 and 20, inclusive. Otherwise, return "Inside".
 function testLogicalOr(val) {
     // Only change code below this line
   
-    if (val) {
+    if (val < 10 || val > 20 ) {
       return "Outside";
     }
   
-    if (val) {
-      return "Outside";
-    }
-  
+
     // Only change code above this line
     return "Inside";
   }
@@ -1291,11 +1304,11 @@ function testLogicalOr(val) {
 //   66 Basic JavaScript: Introducing Else Statements
 // When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
 
-// if (num > 10) {
-//   return "Bigger than 10";
-// } else {
-//   return "10 or Less";
-// }
+if (num > 10) {
+  return "Bigger than 10";
+} else {
+  return "10 or Less";
+}
 // Combine the if statements into a single if/else statement.
 function testElse(val) {
     var result = "";
@@ -1303,9 +1316,7 @@ function testElse(val) {
   
     if (val > 5) {
       result = "Bigger than 5";
-    }
-  
-    if (val <= 5) {
+    } else {
       result = "5 or Smaller";
     }
   
@@ -1318,20 +1329,18 @@ function testElse(val) {
 //   67 Basic JavaScript: Introducing Else If Statements
 // If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
 
-// if (num > 15) {
-//   return "Bigger than 15";
-// } else if (num < 5) {
-//   return "Smaller than 5";
-// } else {
-//   return "Between 5 and 15";
-// }
+if (num > 15) {
+  return "Bigger than 15";
+} else if (num < 5) {
+  return "Smaller than 5";
+} else {
+  return "Between 5 and 15";
+}
 // Convert the logic to use else if statements.
 function testElseIf(val) {
     if (val > 10) {
       return "Greater than 10";
-    }
-  
-    if (val < 5) {
+    } else if (val < 5) {
       return "Smaller than 5";
     }
   
@@ -1349,36 +1358,36 @@ function testElseIf(val) {
 
 // Here's the first:
 
-// function foo(x) {
-//   if (x < 1) {
-//     return "Less than one";
-//   } else if (x < 2) {
-//     return "Less than two";
-//   } else {
-//     return "Greater than or equal to two";
-//   }
-// }
+function foo(x) {
+  if (x < 1) {
+    return "Less than one";
+  } else if (x < 2) {
+    return "Less than two";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
 // And the second just switches the order of the statements:
 
-// function bar(x) {
-//   if (x < 2) {
-//     return "Less than two";
-//   } else if (x < 1) {
-//     return "Less than one";
-//   } else {
-//     return "Greater than or equal to two";
-//   }
-// }
+function bar(x) {
+  if (x < 2) {
+    return "Less than two";
+  } else if (x < 1) {
+    return "Less than one";
+  } else {
+    return "Greater than or equal to two";
+  }
+}
 // While these two functions look nearly identical if we pass a number to both we get different outputs.
 
-// foo(0) // "Less than one"
-// bar(0) // "Less than two"
+foo(0) // "Less than one"
+bar(0) // "Less than two"
 // Change the order of logic in the function so that it will return the correct statements in all cases.
 function orderMyLogic(val) {
-    if (val < 10) {
-      return "Less than 10";
-    } else if (val < 5) {
+    if (val < 5) {
       return "Less than 5";
+    } else if (val < 10) {
+      return "Less than 10";
     } else {
       return "Greater than or equal to 10";
     }
@@ -1389,16 +1398,16 @@ function orderMyLogic(val) {
 //   69 Basic JavaScript: Chaining If Else Statements
 // if/else statements can be chained together for complex logic. Here is pseudocode of multiple chained if / else if statements:
 
-// if (condition1) {
-//   statement1
-// } else if (condition2) {
-//   statement2
-// } else if (condition3) {
-//   statement3
-// . . .
-// } else {
-//   statementN
-// }
+if (condition1) {
+  statement1
+} else if (condition2) {
+  statement2
+} else if (condition3) {
+  statement3
+. . .
+} else {
+  statementN
+}
 // Write chained if/else if statements to fulfill the following conditions:
 
 // num < 5 - return "Tiny"
@@ -1409,9 +1418,19 @@ function orderMyLogic(val) {
 
 function testSize(num) {
     // Only change code below this line
+    if(num < 5){
+      return "Tiny";
+    } else if(num < 10){
+      return 'Small';
+    } else if(num < 15){
+      return 'Medium';
+    } else if(num < 20){
+      return "Large";
+    } else {
+      return "Huge"
+    }
   
-  
-    return "Change Me";
+ 
     // Only change code above this line
   }
   
@@ -1434,9 +1453,23 @@ function testSize(num) {
 var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 function golfScore(par, strokes) {
   // Only change code below this line
+  if(strokes == 1){
+    return 'Hole-in-one!';
+  } else if(strokes <= par -2){
+    return "Eagle";
+  } else if(strokes == par - 1){
+    return 'Birdie';
+  } else if (strokes == par){
+    return 'Par';
+  } else if(strokes == par + 1){
+    return "Bogey";
+  } else if(strokes == par + 2){
+    return "Double Bogey";
+  } else {
+    return "Go Home!";
+  }
 
-
-  return "Change Me";
+ 
   // Only change code above this line
 }
 
