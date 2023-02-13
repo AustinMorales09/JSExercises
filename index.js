@@ -30,7 +30,7 @@ More text
 
 // We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:
 
-// var ourName;
+var ourName;
 // creates a variable called ourName. In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number.
 
 // Use the var keyword to create a variable called myName.
@@ -38,25 +38,24 @@ More text
 var myNameNewCaptial;
 
 
-
 // 3 Basic JavaScript: Storing Values with the Assignment Operator
 // In JavaScript, you can store a value in a variable with the assignment operator (=).
 
-// myVariable = 5;
+myVariable = 5;
 
 // This assigns the Number value 5 to myVariable.
 
 // If there are any calculations to the right of the = operator, those are performed before the value is assigned to the variable on the left of the operator.
 
-// var myVar;
-// myVar = 5;
+var myVar;
+myVar = 5;
 // First, this code creates a variable named myVar. Then, the code assigns 5 to myVar. Now, if myVar appears again in the code, the program will treat it as if it is 5.
 
 // Assign the value 7 to variable a.
 
 // Setup
 var a;
-
+a = 7;
 // Only change code below this line
 a = 7;
 
@@ -67,7 +66,7 @@ a = 7;
 
 // It is common to initialize a variable to an initial value in the same line as it is declared.
 
-// var myVar = 0;
+var myVar = 0;
 
 // Creates a new variable called myVar and assigns it an initial value of 0.
 
@@ -103,9 +102,9 @@ c = c + " String!";
 
 // Examples:
 
-// var someVariable;
-// var anotherVariableName;
-// var thisVariableNameIsSoLong;
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;
 // Modify the existing declarations and assignments so their names use camelCase.
 // Do not create any new variables.
 
@@ -128,7 +127,7 @@ titleCaseOver = 9001;
 
 // Example:
 
-// myVar = 5 + 10; // assigned 15
+myVar = 5 + 10; // assigned 15
 // Change the 0 so that sum will equal 20.
 var sum = 10 + 10;
 
@@ -256,7 +255,7 @@ var quotient = 4.4 / 2.0; // Change this line
 
 var remainder = 11 % 3;
 
-// 17 Basic JavaScript: Compound Assignment With Augmented Addition
+//17 Basic JavaScript: Compound Assignment With Augmented Addition
 // In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
 
 myVar = myVar + 5;
@@ -285,11 +284,11 @@ c += 7;
 // 18 Basic JavaScript: Compound Assignment With Augmented Subtraction
 // Like the += operator, -= subtracts a number from a variable.
 
-// myVar = myVar - 5;
+myVar = myVar - 5;
 
 // will subtract 5 from myVar. This can be rewritten as:
 
-// myVar -= 5;
+myVar -= 5;
 
 // Convert the assignments for a, b, and c to use the -= operator.
 
@@ -305,11 +304,11 @@ c -= 1;
 // 19 Basic JavaScript: Compound Assignment With Augmented Multiplication
 // The *= operator multiplies a variable by a number.
 
-// myVar = myVar * 5;
+myVar = myVar * 5;
 
 // will multiply myVar by 5. This can be rewritten as:
 
-// myVar *= 5;
+myVar *= 5;
 
 // Convert the assignments for a, b, and c to use the *= operator.
 
@@ -325,11 +324,11 @@ c *= 10;
 // 20 Basic JavaScript: Compound Assignment With Augmented Division
 // The /= operator divides a variable by another number.
 
-// myVar = myVar / 5;
+myVar = myVar / 5;
 
 // Will divide myVar by 5. This can be rewritten as:
 
-// myVar /= 5;
+myVar /= 5;
 
 // Convert the assignments for a, b, and c to use the /= operator.
 var a = 48;
@@ -375,7 +374,7 @@ var myStr = "I am a 'double quoted' string inside 'double quotes'."; // Change t
 
 // Example
 
-// 'My name is Alan,' + ' I concatenate.'
+'My name is Alan,' + ' I concatenate.'
 // Note
 // Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
 
@@ -408,8 +407,8 @@ myStr += "This is the second sentence.";
 
 // Example:
 
-// var ourName = "Zorkbork";
-// var ourStr = "Hello, our name is " + ourName + ", how are you?";
+var ourName = "Zorkbork";
+var ourStr = "Hello, our name is " + ourName + " how are you?";
 // // ourStr is now "Hello, our name is Zorkbork, how are you?"
 // Set myName to a string equal to your name and build myStr with myName between the strings "My name is " and " and I am well!"
 var myName ="Austin"
@@ -421,17 +420,17 @@ var myStr = "My name is " + myName + " and I am well!"
 
 // Example:
 
-// var anAdjective = "awesome!";
-// var ourStr = "Austin is ";
-// ourStr += anAdjective;
-// ourStr is now "Austin is awesome!"
+var anAdjective = "awesome!";
+var ourStr = "Austin is ";
+ourStr += anAdjective;
+ourStr is now "Austin is awesome!"
 // Set someAdjective to a string of at least 3 characters and append it to myStr using the += operator.
 
 // Change code below this line
 
-var someAdjective;
+var someAdjective = "cOoL";
 var myStr = "Learning to code is ";
-
+myStr += someAdjective;
 // 27 Basic JavaScript: Find the Length of a String
 // You can find the length of a String value by writing .length after the string variable or string literal.
 
@@ -458,8 +457,8 @@ lastNameLength = lastName.length;
 
 // Example:
 
-// var firstName = "Charles";
-// var firstLetter = firstName[0]; // firstLetter is "C"
+var firstName = "Charles";
+var firstLetter = firstName[0]; // firstLetter is "C"
 // Use bracket notation to find the first character in the lastName variable and assign it to firstLetterOfLastName.
 
 // Hint: Try looking at the example above if you get stuck.
@@ -499,8 +498,8 @@ myStr = "Hello World"; // Change this line
 
 // Example:
 
-// var firstName = "Ada";
-// var secondLetterOfFirstName = firstName[1]; // secondLetterOfFirstName is "d"
+var firstName = "Ada";
+var secondLetterOfFirstName = firstName[1]; // secondLetterOfFirstName is "d"
 // Let's try to set thirdLetterOfLastName to equal the third letter of the lastName variable using bracket notation.
 // Setup
 var lastName = "Lovelace";
@@ -515,8 +514,8 @@ var thirdLetterOfLastName = lastName[2]; // Change this line
 
 // Example:
 
-// var firstName = "Charles";
-// var lastLetter = firstName[firstName.length - 1]; // lastLetter is "s"
+var firstName = "Charles";
+var lastLetter = firstName[firstName.length - 1]; // lastLetter is "s"
 // Use bracket notation to find the last character in the lastName variable.
 
 // Hint: Try looking at the example above if you get stuck.
@@ -533,8 +532,8 @@ var lastLetterOfLastName = lastName[lastName.length - 6]; // Change this line
 
 // Example:
 
-// var firstName = "Charles";
-// var thirdToLastLetter = firstName[firstName.length - 3]; // thirdToLastLetter is "l"
+var firstName = "Charles";
+var thirdToLastLetter = firstName[firstName.length - 3]; // thirdToLastLetter is "l"
 // Use bracket notation to find the second-to-last character in the lastName string.
 
 // Hint: Try looking at the example above if you get stuck.
@@ -545,13 +544,11 @@ var lastName = "Lovelace";
 var secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change this line
 
 // 33 Basic JavaScript: Word Blanks
-// var wordBlanks = "the" + ' '+ myNoun +" "+ myAdjective+ " " + myVerb +" "+ myAdverb; // Change this line
-
 // In a "Mad Libs" game, you are provided sentences with some missing words, like nouns, verbs, adjectives and adverbs. You then fill in the missing pieces with words of your choice in a way that the completed sentence makes sense.
 
 // Consider this sentence - "It was really ____, and we ____ ourselves ____". This sentence has three missing pieces- an adjective, a verb and an adverb, and we can add words of our choice to complete it. We can then assign the completed sentence to a variable as follows:
 
-// var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
+var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
 // In this challenge, we provide you with a noun, a verb, an adjective and an adverb. You need to form a complete sentence using words of your choice, along with the words we provide.
 
 // You will need to use the string concatenation operator + to build a new string, using the provided variables: myNoun, myAdjective, myVerb, and myAdverb. You will then assign the formed string to the wordBlanks variable. You should not change the words assigned to the variables.
@@ -625,7 +622,7 @@ ourArray[0] = 15; // equals [15,40,30]
 var myArray = [18,64,99];
 
 // Only change code below this line
-
+myArray[0] = 45;
 // 38 Basic JavaScript: Access Multi-Dimensional Arrays With Indexes
 // One way to think of a multi-dimensional array, is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
 
@@ -791,7 +788,6 @@ function functionWithArgs(apple,banana) {
 // Declare the myGlobal variable below this line
 var myGlobal = 10;
 
-
 function fun1() { 
     oopsGlobal = 5
     // Assign 5 to oopsGlobal Here
@@ -844,6 +840,8 @@ function myLocalScope() {
 // It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 
 // In this example:
+// global variable
+var someVar = "Hat";
 
 var someVar = "Hat";
 function myFun() {
@@ -924,7 +922,7 @@ addFive();
 
 // Assume we have pre-defined a function sum which adds two numbers together, then:
 
-// ourSum = sum(5, 12);
+ourSum = sum(5, 12);
 
 // will call sum function, which returns a value of 17 and assigns it to ourSum variable.
 
@@ -954,7 +952,6 @@ function nextInLine(arr, item) {
     arr.push(item);
 
     var removed = arr.shift();
-
     
     return removed;
     // Only change code above this line
@@ -1103,11 +1100,11 @@ function compareEquality(a, b) {
 
 // Examples
 
-// 1 !=  2     // true
-// 1 != "1"    // false
-// 1 != '1'    // false
-// 1 != true   // false
-// 0 != false  // false
+1 !=  2     // true
+1 != "1"    // false
+1 != '1'    // false
+1 != true   // false
+0 != false  // false
 // Add the inequality operator != in the if statement so that the function will return "Not Equal" when val is not equivalent to 99
 
 // Setup
@@ -1126,9 +1123,9 @@ function testNotEqual(val) {
 
 // Examples
 
-// 3 !==  3   // false
-// 3 !== '3'  // true
-// 4 !==  3   // true
+3 !==  3   // false
+3 !== '3'  // true
+4 !==  3   // true
 // Add the strict inequality operator to the if statement so the function will return "Not Equal" when val is not strictly equal to 17
 
 // Setup
@@ -1148,10 +1145,10 @@ function testStrictNotEqual(val) {
 
 // Examples
 
-// 5   >  3   // true
-// 7   > '3'  // true
-// 2   >  3   // false
-// '1' >  9   // false
+5   >  3   // true
+7   > '3'  // true
+2   >  3   // false
+'1' >  9   // false
 // Add the greater than operator to the indicated lines so that the return statements make sense.
 
 function testGreaterThan(val) {
@@ -1175,10 +1172,10 @@ function testGreaterThan(val) {
 
 // Examples
 
-// 6   >=  6   // true
-// 7   >= '3'  // true
-// 2   >=  3   // false
-// '7' >=  9   // false
+6   >=  6   // true
+7   >= '3'  // true
+2   >=  3   // false
+'7' >=  9   // false
 // Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testGreaterOrEqual(val) {
@@ -1200,11 +1197,11 @@ function testGreaterOrEqual(val) {
 
 // Examples
 
-// 2   < 5  // true
-// '3' < 7  // true
-// 5   < 5  // false
-// 3   < 2  // false
-// '8' < 4  // false
+2   < 5  // true
+'3' < 7  // true
+5   < 5  // false
+3   < 2  // false
+'8' < 4  // false
 
 // Add the less than operator to the indicated lines so that the return statements make sense.
 function testLessThan(val) {
@@ -1226,11 +1223,11 @@ function testLessThan(val) {
 
 // Examples
 
-// 4   <= 5  // true
-// '7' <= 7  // true
-// 5   <= 5  // true
-// 3   <= 2  // false
-// '8' <= 4  // false
+4   <= 5  // true
+'7' <= 7  // true
+5   <= 5  // true
+3   <= 2  // false
+'8' <= 4  // false
 // Add the less than or equal to operator to the indicated lines so that the return statements make sense.
 
 function testLessOrEqual(val) {
@@ -1288,13 +1285,13 @@ function testLogicalAnd(val) {
 
 // The pattern below should look familiar from prior waypoints:
 
-// if (num > 10) {
-//   return "No";
-// }
-// if (num < 5) {
-//   return "No";
-// }
-// return "Yes";
+if (num > 10) {
+  return "No";
+}
+if (num < 5) {
+  return "No";
+}
+return "Yes";
 // will return "Yes" only if num is between 5 and 10 (5 and 10 included). The same logic can be written as:
 
 if (num > 10 || num < 5) {
@@ -1309,6 +1306,7 @@ function testLogicalOr(val) {
       return "Outside";
     }
   
+
     // Only change code above this line
     return "Inside";
   }
@@ -1398,14 +1396,14 @@ function bar(x) {
 }
 // While these two functions look nearly identical if we pass a number to both we get different outputs.
 
-// foo(0) // "Less than one"
-// bar(0) // "Less than two"
+foo(0) // "Less than one"
+bar(0) // "Less than two"
 // Change the order of logic in the function so that it will return the correct statements in all cases.
 function orderMyLogic(val) {
-    if (val < 10) {
-      return "Less than 10";
-    } else if (val < 5) {
+    if (val < 5) {
       return "Less than 5";
+    } else if (val < 10) {
+      return "Less than 10";
     } else {
       return "Greater than or equal to 10";
     }
@@ -1416,16 +1414,16 @@ function orderMyLogic(val) {
 //   69 Basic JavaScript: Chaining If Else Statements
 // if/else statements can be chained together for complex logic. Here is pseudocode of multiple chained if / else if statements:
 
-// if (condition1) {
-//   statement1
-// } else if (condition2) {
-//   statement2
-// } else if (condition3) {
-//   statement3
-// . . .
-// } else {
-//   statementN
-// }
+if (condition1) {
+  statement1
+} else if (condition2) {
+  statement2
+} else if (condition3) {
+  statement3
+. . .
+} else {
+  statementN
+}
 // Write chained if/else if statements to fulfill the following conditions:
 
 // num < 5 - return "Tiny"
@@ -1734,8 +1732,7 @@ var count = 0;
 function cc(card) {
   // Only change code below this line
 
-
-  return "Change Me";
+ 
   // Only change code above this line
 }
 
