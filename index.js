@@ -111,7 +111,7 @@ c = c + " String!";
 var studlyCapVar;
 var properCamelCase;
 var titleCaseOver;
-
+// magic comment
 // Variable assignments
 studlyCapVar = 10;
 properCamelCase = "A String";
@@ -124,7 +124,7 @@ titleCaseOver = 9001;
 
 // JavaScript uses the + symbol as an addition operator when placed between two numbers.
 
-// Example:
+// Example:~
 
 // myVar = 5 + 10; // assigned 15
 // Change the 0 so that sum will equal 20.
