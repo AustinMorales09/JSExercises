@@ -1,21 +1,23 @@
 // 1 Basic JavaScript: Comment Your JavaScript Code
 //Using // will tell JavaScript to ignore the remainder of the text on the current line:
+
+
 // This is an in-line comment. You can make a multi-line comment beginning with /* and ending with */:
 
 /* 
 This is a
 multi-line comment 
 Best Practice
-As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code—both for others and for your future self. */
+As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code—both for others and for your future self.
+ */
 
 // Try creating one of each type of comment.
 
-// Single line
+// single line comment
 
-/* 
-Multi-Line
-More text
-*/
+/* multi line
+    comment 
+    */
 
 
 
@@ -30,7 +32,7 @@ More text
 
 // We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:
 
-// var ourName;
+var ourName;
 // creates a variable called ourName. In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number.
 
 // Use the var keyword to create a variable called myName.
@@ -38,18 +40,21 @@ More text
 var myNameNewCaptial;
 
 
-
 // 3 Basic JavaScript: Storing Values with the Assignment Operator
 // In JavaScript, you can store a value in a variable with the assignment operator (=).
 
-// myVariable = 5;
+// assignment
+myVariable = 5;
+
+// equality
+myVariable == 5;
 
 // This assigns the Number value 5 to myVariable.
 
 // If there are any calculations to the right of the = operator, those are performed before the value is assigned to the variable on the left of the operator.
 
-// var myVar;
-// myVar = 5;
+var myVar;
+myVar = 5;
 // First, this code creates a variable named myVar. Then, the code assigns 5 to myVar. Now, if myVar appears again in the code, the program will treat it as if it is 5.
 
 // Assign the value 7 to variable a.
@@ -67,14 +72,14 @@ a = 7;
 
 // It is common to initialize a variable to an initial value in the same line as it is declared.
 
-// var myVar = 0;
+var myVar = 0;
 
 // Creates a new variable called myVar and assigns it an initial value of 0.
 
 // Define a variable a with var and initialize it to a value of 9.
 
-var a = 9;
 
+var a = 9;
 
 
 // 5 Basic JavaScript: Understanding Uninitialized Variables
@@ -113,7 +118,7 @@ c = c + " String!";
 var studlyCapVar;
 var properCamelCase;
 var titleCaseOver;
-
+// magic comment
 // Variable assignments
 studlyCapVar = 10;
 properCamelCase = "A String";
@@ -126,7 +131,7 @@ titleCaseOver = 9001;
 
 // JavaScript uses the + symbol as an addition operator when placed between two numbers.
 
-// Example:
+// Example:~
 
 // myVar = 5 + 10; // assigned 15
 // Change the 0 so that sum will equal 20.
