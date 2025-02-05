@@ -1512,15 +1512,13 @@ golfScore(5, 4);
 // If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
 
 // Here is an example of a switch statement:
+function switchExample(lowercaseLetter){
+  switch() {
+  
+  }
 
-// switch(lowercaseLetter) {
-//   case "a":
-//     console.log("A");
-//     break;
-//   case "b":
-//     console.log("B");
-//     break;
-// }
+}
+
 // case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed.
 
 // Write a switch statement which tests val and sets answer for the following conditions:
@@ -1533,8 +1531,32 @@ golfScore(5, 4);
 function caseInSwitch(val) {
   var answer = "";
   // Only change code below this line
-
-
+  switch(val){
+    case 1:
+      answer = 'alpha';
+      break;
+    case 2:
+      answer = 'beta';
+      break;
+    case 3:
+      answer = 'gamma';
+      break;
+    case 4:
+      answer = 'delta';
+      break;
+    
+  }
+// else if solution
+// if(val === 1){
+//   answer = 'alpha';
+//   break;
+// } else if (val === 2){
+//   answer = 'beta'
+// } else if (val === 3){
+//   answer = 'gamma'
+// } else if(val === 4){
+//   answer = 'delta'
+// }
 
   // Only change code above this line
   return answer;
@@ -1547,18 +1569,18 @@ caseInSwitch(1);
 
 // A default statement should be the last case.
 
-// switch (num) {
-//   case value1:
-//     statement1;
-//     break;
-//   case value2:
-//     statement2;
-//     break;
-// ...
-//   default:
-//     defaultStatement;
-//     break;
-// }
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
 // Write a switch statement to set answer for the following conditions:
 // "a" - "apple"
 // "b" - "bird"
@@ -1567,7 +1589,20 @@ caseInSwitch(1);
 function switchOfStuff(val) {
   var answer = "";
   // Only change code below this line
-
+  switch (val) {
+    case "a":
+      answer = "apple"
+      break;
+    case "b":
+      answer = "bird"
+      break;
+    case "c":
+      answer = "cat"
+      break;
+    default:
+      answer = "stuff"
+      break;
+  }
 
 
   // Only change code above this line
