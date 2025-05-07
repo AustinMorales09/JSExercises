@@ -571,13 +571,14 @@ var myVerb = "ran";
 var myAdverb = "quickly";
 
 // Only change code below this line
-var wordBlanks = "The " + myAdjective + ' ' + myNoun + ' ' + myVerb + ' ' + myAdverb; // Change this line
+var wordBlanks = "The " + myAdjective + ' ' + myNoun + ' ' + myVerb + ' ' + myAdverb;
 // Only change code above this line
 
+// comment
 
 // 34 Basic JavaScript: Store Multiple Values in one Variable using JavaScript Arrays
 // With JavaScript array variables, we can store several pieces of data in one place.
-
+// anonther one
 // You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
 
 var sandwich = ["peanut butter", "jelly", "bread"]
